@@ -11,7 +11,7 @@ const Farm = (props) => {
     return (
         <>
           
-            <RealtyFarmLayout />
+           <h1 style={{color: "black"}}>HOME!!</h1>
         </>
     )
 }

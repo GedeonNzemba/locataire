@@ -94,6 +94,7 @@ div.realEstate-header-content__btn {
 
 // REALTY RESPONSIVENESS
 .realEstate-midD {
+  position: relative;
   @media (max-width: 899px) {
     display: flex;
   }

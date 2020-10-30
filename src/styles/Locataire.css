@@ -2910,6 +2910,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 p,
 h1,
 h2,
@@ -2929,6 +2934,10 @@ h5,
 h6,
 p {
   text-rendering: optimizeLegibility;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .realty {
@@ -6145,6 +6154,10 @@ p {
     -webkit-margin-before: -35px;
             margin-block-start: -35px;
   }
+}
+
+.realEstate-midD {
+  position: relative;
 }
 
 @media (max-width: 899px) {
