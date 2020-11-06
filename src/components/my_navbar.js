@@ -5,7 +5,7 @@ import "../fonts/gt super/stylesheet.css"
 import "./realty_about_layout"
 import ButtonOne from "./buttonOne"
 
-export default function Navbar() {
+export default function My_navbar() {
     return (
         <div className="realEstate">
             <nav className="realEstate_navigation">

@@ -6,7 +6,7 @@ import RealtyFarmLayout from "../components/realty_farm_layout"
 // import RiskManagement from "./RiskManagement"
 // import LocataireFarm from "./Farm"
 
-const Farm = (props) => {
+const Home = (props) => {
 
     return (
         <>
@@ -15,4 +15,4 @@ const Farm = (props) => {
         </>
     )
 }
-export default Farm
+export default Home

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ParallaxProvider } from 'react-scroll-parallax';
+import Carousel from 'react-bootstrap/Carousel'
 import { Parallax } from 'react-scroll-parallax';
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
@@ -24,6 +23,24 @@ import Career from './Career'
 import RiskManagement from './RiskManagement'
 import Realtymobile from "../components/Realtymb";
 // import ScriptTag from 'react-script-tag';
+import  image_1  from "../images/REALTY/data0/images/image_1.jpg";
+import image_2 from '../images/REALTY/data0/images/image_2.jpg'
+import image_3 from '../images/REALTY/data0/images/image_3.jpg'
+import image_4 from '../images/REALTY/data0/images/image_4.jpg'
+import image_5 from '../images/REALTY/data0/images/image_5.jpg'
+import image_6 from '../images/REALTY/data0/images/image_6.jpg'
+import image_7 from '../images/REALTY/data0/images/image_7.jpg'
+
+import image_1a from '../images/REALTY/all types/900_1199/office-881758.jpg'
+import image_2b from '../images/REALTY/data0/tooltips/image_2.jpg'
+import image_3c from '../images/REALTY/all types/900_1199/pexels-tomek-mądry.jpg'
+import image_4d from '../images/REALTY/data0/tooltips/image_4.jpg'
+import image_5e from '../images/REALTY/data0/tooltips/image_5.jpg'
+import image_6f from '../images/REALTY/all types/900_1199/single-family-home.jpg'
+import image_7g from '../images/REALTY/data0/tooltips/image_7.jpg'
+
+
+
 
 
 export default function RealEstate() {
@@ -38,64 +55,25 @@ export default function RealEstate() {
   // const cdn_4 = require("https://locataire.imfast.io/engine1/wowslider.mod.js");
 
   // IMAGES FOR HEADER SLIDER
-  const image_1 = require("../images/REALTY/data0/images/image_1.jpg");
-  const image_2 = require("../images/REALTY/data0/images/image_2.jpg");
-  const image_3 = require("../images/REALTY/data0/images/image_3.jpg");
-  const image_4 = require("../images/REALTY/data0/images/image_4.jpg");
-  const image_5 = require("../images/REALTY/data0/images/image_5.jpg");
-  const image_6 = require("../images/REALTY/data0/images/image_6.jpg");
-  const image_7 = require("../images/REALTY/data0/images/image_7.jpg");
+  // const image_1 = require("../images/REALTY/data0/images/image_1.jpg");
+  // const image_2 = require("../images/REALTY/data0/images/image_2.jpg");
+  // const image_3 = require("../images/REALTY/data0/images/image_3.jpg");
+  // const image_4 = require("../images/REALTY/data0/images/image_4.jpg");
+  // const image_5 = require("../images/REALTY/data0/images/image_5.jpg");
+  // const image_6 = require("../images/REALTY/data0/images/image_6.jpg");
+  // const image_7 = require("../images/REALTY/data0/images/image_7.jpg");
 
-  const image_1a = require("../images/REALTY/data0/tooltips/image_1.jpg");
-  const image_2b = require("../images/REALTY/data0/tooltips/image_2.jpg");
-  const image_3c = require("../images/REALTY/data0/tooltips/image_3.jpg");
-  const image_4d = require("../images/REALTY/data0/tooltips/image_4.jpg");
-  const image_5e = require("../images/REALTY/data0/tooltips/image_5.jpg");
-  const image_6f = require("../images/REALTY/data0/tooltips/image_6.jpg");
-  const image_7g = require("../images/REALTY/data0/tooltips/image_7.jpg");
-
-
+  // const image_1a = require("../images/REALTY/data0/tooltips/image_1.jpg");
+  // const image_2b = require("../images/REALTY/data0/tooltips/image_2.jpg");
+  // const image_3c = require("../images/REALTY/data0/tooltips/image_3.jpg");
+  // const image_4d = require("../images/REALTY/data0/tooltips/image_4.jpg");
+  // const image_5e = require("../images/REALTY/data0/tooltips/image_5.jpg");
+  // const image_6f = require("../images/REALTY/data0/tooltips/image_6.jpg");
+  // const image_7g = require("../images/REALTY/data0/tooltips/image_7.jpg");
 
 
 
-  useEffect(() => {
 
-    const addCSS = url => {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = url;
-
-      document.head.appendChild(link);
-    }
-
-    const addJquery = url => {
-      const script = document.createElement("script")
-      script.src = url;
-      script.async = true
-      document.head.appendChild(script);
-    }
-
-    const addWowSliderScript = url => {
-      const script = document.createElement("script")
-      script.src = url;
-      script.async = true
-      document.body.appendChild(script)
-    }
-
-    const addScript = url => {
-      const script = document.createElement("script")
-      script.src = url;
-      script.async = true
-      document.body.appendChild(script)
-    }
-
-
-
-    addCSS("https://locataire.imfast.io/engine1/style.css");
-    addJquery("https://locataire.imfast.io/engine1/jquery.js");
-    addWowSliderScript("https://locataire.imfast.io/engine1/wowslider.js");
-    addScript("https://locataire.imfast.io/engine1/script.js");
-  }, [])
 
 
   const data = useStaticQuery(graphql`
@@ -117,6 +95,20 @@ export default function RealEstate() {
         }
       }
     }
+
+    flagCountry: file(
+      relativePath: { eq: "canada_USA.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    flag: file(relativePath: {eq: "Realty/canada_USA.jpg", glob: ""}, childImageSharp: {fluid: {}}) {
+      id
+    }
   
 
   mobileTwo: file(
@@ -135,7 +127,6 @@ export default function RealEstate() {
 
   return (
     <>
-      <ParallaxProvider>
         <Realtymobile />
         <div className="realEstate">
           <Helmet>
@@ -179,153 +170,64 @@ export default function RealEstate() {
                   <div className="realEstate_text-wrap">
                     <p>
                       Locataire Realty provides real estate services to
-                    prospective <br />
+                    prospective 
                     clients looking to buy, sell or lease residential and
                     commercial
-                    <br />
+                    
                     real estates in the United States and Canada.
                   </p>
                   </div>
+                    
+
                   <div className="realEstate_getMoreInfoBtn">
                     <ButtonSevenB name="learn more" />
                   </div>
+
+                  <div className="realEstate_flag-wrap">
+                      <div className="realEstate_flag" />
+                    </div>
                 </div>
               </div>
 
               {/* RIGHT CONTENT */}
               <div className="realEstate_rightContainer">
-                <div id="wowslider-container1">
-                  <div className="ws_images">
-                    <ul>
-                      <li>
-                        <img
-                          src={image_1}
-                          alt=""
+              <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={image_1a}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={image_3c}
+      alt="Third slide"
+    />
 
-                          id="wows1_0"
-                        />
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                      <li>
-                        <img
-                          src={image_2}
-                          alt="Residential Real Estate"
-                          // 
-                          id="wows1_1"
-                        />
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                      <li>
-                        <img
-                          src={image_3}
-                          alt="Residential Real Estate"
-                          // 
-                          id="wows1_2"
-                        />
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                      <li>
-                        <img
-                          src={image_4}
-                          alt="Residential Real Estate"
-                          // 
-                          id="wows1_3"
-                        />
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                      <li>
-                        <img
-                          src={image_5}
-                          alt=""
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={image_6f}
+      alt="Third slide"
+    />
 
-                          id="wows1_4"
-                        />
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                      <li>
-                        <a href="http://wowslider.net">
-                          <img
-                            src={image_6}
-                            alt="wow slider"
-
-                            id="wows1_5"
-                          />
-                        </a>
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                      <li>
-                        <img
-                          src={image_7}
-                          alt="Residential Real Estate"
-                          // 
-                          id="wows1_6"
-                        />
-                        {/* Locataire offers to prospective partners opportunities to
-                      invest in dozens of high-growth residential and commercial
-                      properties in the United States, and Canada. */}
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="ws_bullets">
-                    <div>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_1a} alt="" />1
-                      </span>
-                      </a>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_2b} alt="Residential Real Estate" />2
-                      </span>
-                      </a>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_3c} alt="Residential Real Estate" />3
-                      </span>
-                      </a>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_4d} alt="Residential Real Estate" />4
-                      </span>
-                      </a>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_5e} alt="" />5
-                      </span>
-                      </a>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_6f} alt="" />6
-                      </span>
-                      </a>
-                      <a href="www.google.com" >
-                        <span>
-                          <img src={image_7g} alt="Residential Real Estate" />7
-                      </span>
-                      </a>
-                    </div>
-                  </div>
-                  <div
-                    className="ws_script"
-                    style={{ position: "absolute", left: "-99%" }}
-                  >
-                    <a href="http://wowslider.net">bootstrap image slider</a> by
-                  WOWSlider.com v9.0
-                </div>
-                  <div className="ws_shadow"></div>
-                </div>
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
               </div>
             </section>
           </header>
@@ -874,7 +776,6 @@ export default function RealEstate() {
           </div>
           <Contact />
         </div>
-      </ParallaxProvider>
     </>
   )
 }

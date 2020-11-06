@@ -1,0 +1,8 @@
+.slick-slide img {
+    display: block;
+    width: 800px;
+    height: 300px;
+}
+.slick-slide {
+    width: 500px!important;
+}

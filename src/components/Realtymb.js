@@ -17,68 +17,24 @@ import Contact_btn from "./Contact_btn"
 import Navbar from "./Navbar";
 
 import Home from '../pages/Home'
-import realEstate from '../pages/RealEstate'
 import Farm from '../pages/Farm'
 import Contact from '../pages/Contact'
 import Career from '../pages/Career'
 import RiskManagement from '../pages/RiskManagement'
 import RealEstate from "../pages/RealEstate";
+import Slick from "./Slick";
+import SlickInvestment from "./SlickInvestment";
 // import ScriptTag from 'react-script-tag';
 
+import image_1  from "../images/REALTY/all types/estate_1.jpg";
+import image_2 from '../images/REALTY/all types/estate_2.jpg'
+import image_3 from '../images/REALTY/all types/estate_3.jpg'
+import image_4 from '../images/REALTY/all types/estate_4.jpg'
+import image_5 from '../images/REALTY/all types/estate_5.jpg'
+import image_6 from '../images/REALTY/all types/estate_6.jpg'
+import SlickProperty from "./SlickProperty";
 
 export default function Realtymobile() {
-  // const cover_mobile = require("../images/REALTY/mobile/drawable-mdpi/Group11.png")
-  // const realty_about = require("../images/REALTY/realty_about_layout.png");
-  // const realty_about_2 = require("../images/REALTY/realty_about_layout-about-2.png");
-  // const realty_about_3 = require("../images/REALTY/realty_about_layout-about-3.png");
-
-  // const cdn_1 = require("../static/engine0/style.css");
-  // const cdn_2 = require("../images/REALTY/engine1/script");
-  // const cdn_3 = require("https://locataire.imfast.io/engine1/jquery.js");
-  // const cdn_4 = require("https://locataire.imfast.io/engine1/wowslider.mod.js");
-
-  // IMAGES FOR HEADER SLIDER
-
-
-//   useEffect(() => {
-
-//     const addCSS = url => {
-//       const link = document.createElement("link");
-//       link.rel = "stylesheet";
-//       link.href = url;
-
-//       document.head.appendChild(link);
-//     }
-
-//     const addJquery = url => {
-//       const script = document.createElement("script")
-//       script.src = url;
-//       script.async = true
-//       document.head.appendChild(script);
-//     }
-
-//     const addWowSliderScript = url => {
-//       const script = document.createElement("script")
-//       script.src = url;
-//       script.async = true
-//       document.body.appendChild(script)
-//     }
-
-//     const addScript = url => {
-//       const script = document.createElement("script")
-//       script.src = url;
-//       script.async = true
-//       document.body.appendChild(script)
-//     }
-
-
-
-//     addCSS("https://locataire.imfast.io/engine1/style.css");
-//     addJquery("https://locataire.imfast.io/engine1/jquery.js");
-//     addWowSliderScript("https://locataire.imfast.io/engine1/wowslider.js");
-//     addScript("https://locataire.imfast.io/engine1/script.js");
-//   }, [])
-
 
   const data = useStaticQuery(graphql`
     query {
@@ -117,19 +73,8 @@ export default function Realtymobile() {
 
   return (
     <>
-      <ParallaxProvider>
-        <div className="realEstate-midD">
-          <Router>
-            <Navbar />
-            <Switch >
-              <Route path='/home' component={Home} />
-              <Route path='/'  component={RealEstate} />
-              <Route path='/farm' component={Farm} />
-              <Route path='/contact' component={Contact} />
-              <Route path='/career' component={Career} />
-              <Route path='/riskmanagement' component={RiskManagement} />
-            </Switch>
-          </Router>
+        <div className="realEstate-midD reset-this">
+          
           {/* TOP HEADER */}
           <header className="realEstate_header" >
 
@@ -144,10 +89,10 @@ export default function Realtymobile() {
                 </div>
                 <div className="realEstate-header-content__text">
                   <p>
-                    Locataire Realty provides real estate <br className="header_text" />
-                  services to prospective clients looking <br className="header_text" />
-                  to buy, sell or lease residential and <br className="header_text" />
-                  commercial real estates in the United <br className="header_text" />
+                    Locataire Realty provides real estate 
+                  services to prospective clients looking 
+                  to buy, sell or lease residential and 
+                  commercial real estates in the United 
                   States, and Canada.
                 </p>
                 </div>
@@ -163,6 +108,8 @@ export default function Realtymobile() {
 
           {/* MAIN CONTENT */}
 
+          
+
           <main className="realEstate-about">
             <section className="realEstate-title">
               <div className="realEstate-title_wrap">
@@ -177,22 +124,43 @@ export default function Realtymobile() {
                 </div>
               </div>
             </section>
+
+            
+
             <section className="realEstate-image">
-              <Parallax >
-                <IMG fluid={data.mobileTwo.childImageSharp.fluid} className="mobile_one tablet__IMG" />
-              </Parallax>
+            <Slick 
+                img_1 = {<IMG fluid={data.mobileOne.childImageSharp.fluid} className="mobile_one tablet__IMG" />}
+                img_2 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_5}
+                        alt="Second slide"
+                    />
+                }
+                img_3 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_4}
+                        alt="Third slide"
+                    />
+                }
+            />
               <div className="svg-Mobile-about_left" />
               <div className="svg-Mobile-about_right"></div>
             </section>
-            <section className="realEstate-content">
+            <section className="realEstate-content" id="realty-list">
               <div className="realEstate-content_wrap" >
                 <div className="realEstate-content_text">
+                  {/* <p>
+                    Our core business includes management
+                    and administration of commercial and
+                    multifamily residential properties.
+              </p> */}
                   <p>
                     Our core business includes management
                     and administration of commercial and
                     multifamily residential properties.
-              </p>
-                  <p>
+                    <p></p>
                     our primary business objective is to
                     maximize the total return to property
                     owners, through strategic acquisition,
@@ -224,14 +192,34 @@ export default function Realtymobile() {
               </div>
             </section>
             <section className="realEstate-image">
-              <Parallax >
-                <IMG fluid={data.mobileOne.childImageSharp.fluid} className="mobile_one tablet__IMG" />
-              </Parallax>
+              <SlickInvestment
+                img_1 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_3}
+                        alt="First slide"
+                    />
+                }
+                img_2 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_6}
+                        alt="First slide"
+                    />
+                }
+                img_3 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_1}
+                        alt="Third slide"
+                    /> 
+                }
+              />
               <div id="svg-Mobile-about_left" />
               <div className="svg-Mobile-about_right" id="svg-Mobile-about_right" />
             </section>
 
-            <section className="realEstate-content">
+            <section className="realEstate-content" id="realty-list">
               <div className="realEstate-content_wrap" >
                 <div className="realEstate-content_text">
                   <div id="svg-Mobile-invest_left" />
@@ -272,7 +260,105 @@ export default function Realtymobile() {
                 </div>
               </div>
 
-              <div className="realEstate-invest__services">
+              {/* SLIDER A */}
+
+              <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Identify undervalue real estate properties
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Property acquisition                       </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Leases administration
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Renovation and remodeling                       </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Implement strategic capital and operational programs to increase cashflow                       </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Reduce overall risk
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Evictions proceedings
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Possession of leased premises
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Financial reporting
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+            </div>
+
+              {/* SLIDER A ENDS */}
+
+              {/* <div className="realEstate-invest__services">
                 <div className="reaalEstate-invest_content">
                   <div className="realEstate-invest__item-Wrap">
 
@@ -328,7 +414,7 @@ export default function Realtymobile() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </section>
 
             {/* PROPERTY MANAGEMENT */}
@@ -342,14 +428,36 @@ export default function Realtymobile() {
               </div>
             </section>
             <section className="realEstate-image">
-              <Parallax >
-                <IMG fluid={data.mobileTwo.childImageSharp.fluid} className="mobile_one tablet__IMG" />
-              </Parallax>
+            <SlickProperty
+                img_1 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_1}
+                        alt="Second slide"
+                    />
+                }
+                img_2 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_3}
+                        alt="Second slide"
+                    />
+                }
+                img_3 = {
+                    <img
+                        className="d-block w-100"
+                        src={image_1}
+                        alt="Third slide"
+                    />
+                }
+            />
+                
+              
               <div id="svg-Mobile-about_left" />
               <div className="svg-Mobile-about_right" id="svg-Mobile-about_right" />
             </section>
 
-            <section className="realEstate-content">
+            <section className="realEstate-content" id="property-management">
               <div className="realEstate-content_wrap" >
                 <div className="realEstate-content_text">
                   <div id="svg-Mobile-invest_left" />
@@ -388,10 +496,113 @@ export default function Realtymobile() {
                 </div>
               </div>
 
-              <div className="realEstate-invest__services">
+              {/* SLIDER A */}
+
+              <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-one_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Advertising and filling vacancies                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-two_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Tenant screening (credit, criminal background)
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Leases administration
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-four_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Move-in inspection walkthrough
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-five_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Rent payment
+                      </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-six_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Repairs & maintenance
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Evictions proceedings
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Possession of leased premises
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Financial reporting
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+            </div>
+
+              {/* SLIDER A ENDS */}
+
+              {/* <div className="realEstate-invest__services">
                 <div className="reaalEstate-invest_content">
                   <div className="realEstate-invest__item-Wrap">
 
+                  <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+
+                  <div className="carousel-cell">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-one_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -399,7 +610,9 @@ export default function Realtymobile() {
                           Advertising and filling vacancies                      </p>
                       </div>
                     </div>
+                 </div>
 
+                    <div className="carousel">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-two_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -408,7 +621,9 @@ export default function Realtymobile() {
                       </p>
                       </div>
                     </div>
+                    </div>
 
+                    <div className="carousel">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -417,7 +632,9 @@ export default function Realtymobile() {
                       </p>
                       </div>
                     </div>
+                    </div>
 
+                    <div className="carousel">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-four_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -426,7 +643,9 @@ export default function Realtymobile() {
                       </p>
                       </div>
                     </div>
+                    </div>
 
+                    <div className="carousel">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-five_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -435,7 +654,9 @@ export default function Realtymobile() {
                       </p>
                       </div>
                     </div>
+                    </div>
 
+                    <div className="carousel"></div>
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-six_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -445,6 +666,7 @@ export default function Realtymobile() {
                       </div>
                     </div>
 
+                    <div className="carousel"></div>
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-seven_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -454,6 +676,7 @@ export default function Realtymobile() {
                       </div>
                     </div>
 
+                    <div className="carousel"></div>
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -463,6 +686,7 @@ export default function Realtymobile() {
                       </div>
                     </div>
 
+                    <div className="carousel"></div>
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -472,6 +696,7 @@ export default function Realtymobile() {
                       </div>
                     </div>
 
+                    <div className="carousel"></div>
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
                       <div className="realEstate-invest__item-content">
@@ -480,16 +705,17 @@ export default function Realtymobile() {
                       </p>
                       </div>
                     </div>
+
+                </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </section>
 
             <Contact />
 
           </main>
         </div>
-    </ParallaxProvider>]
     </>
   )
 }

@@ -705,11 +705,11 @@ button {
     left: 0;
     z-index: -1;
     transition: all .4s;
-    border: 4px solid $bluethick;
+    // background-color: $bluethick;
 }
 
 .btnB--green::after {
-    background-color: transparent;
+    background-color: $bluethick;
     border: 4px solid $bluethick;
     padding: 2rem 4rem;
 }
@@ -725,6 +725,7 @@ button {
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
+            background-color: $bluethick;
         }
     }
 

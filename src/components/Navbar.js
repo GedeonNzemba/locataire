@@ -8,6 +8,7 @@ import { IconContext } from 'react-icons'
 
 
 function Navbar() {
+    const logo = require('../images/logo.png')
     const [sidebar, setSidebar] = useState (false);
 
     const showSidebar = () => setSidebar(!sidebar);
@@ -17,6 +18,11 @@ function Navbar() {
             <div className="navbar">
                 <Link to="#" className="menu-bars">
                     <FaIcons.FaBars onClick={showSidebar}/>
+                </Link>
+                <Link to="#" className="logo">
+                    <figure className="logo" onClick={showSidebar}>
+                        <img src={logo} alt="Locataire logo" id="logo" />
+                    </figure>
                 </Link>
             </div>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

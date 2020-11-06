@@ -503,8 +503,16 @@ html::-webkit-scrollbar {
                     justify-content: space-around;
                     // background-color: black;
                     padding-left: 7rem;
-                    padding-top: 10rem;
+                    padding-top: 5rem;
                     padding-right: 2.5em;
+
+                    @include for-tablet-landscape-only {
+                        padding-top: 20rem;
+                    }
+
+                    @include for-xsmall-desktop-up {
+                        padding-top: 20rem;
+                    }
 
                     @media (min-width: 1200px) {
                         padding-top: calc(120px + (150 - 120) * (100vw - 1200px) / (1365 - 1200));
@@ -571,6 +579,14 @@ html::-webkit-scrollbar {
                         margin-bottom: 1rem;
                         letter-spacing: .45px;
 
+                        @include for-tablet-landscape-only {
+                            margin: 4rem 0;
+                        }
+
+                        @include for-xsmall-desktop-up {
+                            margin: 4rem 0;
+                        }
+
                         @media (min-width: 901px) {
                             font-size: 2rem;
                         }
@@ -620,6 +636,12 @@ html::-webkit-scrollbar {
                 flex-direction: column;
                 overflow: hidden;
                 margin-top: 8rem;
+
+                @include for-tablet-landscape-only {
+                    margin-top: 12rem;
+                    border-radius: 280px 0 35% 35%;
+                    border-left: 17px solid #06D;
+                }
                 @include for-big-desktop-up  {
                     border-radius: 0% 0% 45%;
                     border-bottom: 10px solid $blue;
@@ -702,6 +724,9 @@ html::-webkit-scrollbar {
                         position: absolute;
                         right: 0;
                         top: 78px;
+                        width: 100px;
+                        height: 149px;
+                            
 
                         &#realty__image-svgOne-two {
                             left: 0;
@@ -967,3 +992,43 @@ main.investment_service {
     }
 
 }
+
+
+  
+ 
+  
+
+@media (max-width: 1199px) {
+    // FLICKITY SLIDER
+.carousel {
+    background: none;
+  }
+  
+  .carousel-cell {
+    width: 50%;
+    height: 250px;
+    margin-right: 10px;
+    // background: #8C8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    // counter-increment: carousel-cell;
+  }
+
+    div.realEstate-content_icon span  {
+        display: none;
+    }
+
+    .flickity-viewport {
+        height: 31.25rem!important;
+    }
+
+}
+
+@include for-tablet-portrait-down {
+    body {
+        background-color: #e5e8e8;
+        background-blend-mode: darken;
+    }
+}
+

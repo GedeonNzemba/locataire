@@ -60,10 +60,11 @@
 .contactFormHeading {
     color: white;
     font-family: "GT Super Ds Trial Bd";
-    font-weight: 200;
+    font-weight: bold;
     padding: 10px;
     padding-left: 0px;
     font-size: $xlarge-body-copy;
+    text-transform: uppercase;
 }
 
 .contactFormInputWrapper {
@@ -262,7 +263,7 @@ form:focus~label {
 
 .bttn:before, .icon-heart:after, .icon-star:after, .icon-plus:after, .icon-file:before {
     font-family: 'Ginto regular';
-    speak: none;
+    // speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
