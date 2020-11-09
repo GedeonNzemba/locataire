@@ -1,6 +1,4 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Helmet from 'react-helmet';
 import Carousel from 'react-bootstrap/Carousel'
 
 import "./slick.css";

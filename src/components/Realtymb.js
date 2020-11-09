@@ -1,33 +1,19 @@
 import React from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { Parallax } from 'react-scroll-parallax';
 import { useStaticQuery, graphql } from "gatsby"
-import Helmet from "react-helmet"
 import IMG from "gatsby-image"
 import "../styles/Locataire.css"
 import "../fonts/gt super/stylesheet.css"
 import "../components/realty_about_layout"
 // import ButtonFive from "../components/ButtonFive"
-import ButtonSix from "./buttonSix"
 import ButtonSeven from "./buttonSeven"
-import ButtonEight from "./ButtonEight"
-import ButtonSevenB from "./buttonNine"
 import Contact_btn from "./Contact_btn"
-import Navbar from "./Navbar";
 
-import Home from '../pages/Home'
-import Farm from '../pages/Farm'
 import Contact from '../pages/Contact'
-import Career from '../pages/Career'
-import RiskManagement from '../pages/RiskManagement'
-import RealEstate from "../pages/RealEstate";
 import Slick from "./Slick";
 import SlickInvestment from "./SlickInvestment";
 // import ScriptTag from 'react-script-tag';
 
 import image_1  from "../images/REALTY/all types/estate_1.jpg";
-import image_2 from '../images/REALTY/all types/estate_2.jpg'
 import image_3 from '../images/REALTY/all types/estate_3.jpg'
 import image_4 from '../images/REALTY/all types/estate_4.jpg'
 import image_5 from '../images/REALTY/all types/estate_5.jpg'

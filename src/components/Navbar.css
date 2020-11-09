@@ -11,6 +11,12 @@
     z-index: 9999;
 }
 
+@media (min-width: 1200px) {
+    .navbar {
+        display: none;
+    }
+}
+
 .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -79,4 +85,8 @@ figure.logo > img {
 
 span {
     margin-left: 16px;
+}
+
+*::-webkit-scrollbar {
+    display: none;
 }

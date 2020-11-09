@@ -1,9 +1,10 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Carousel from 'react-bootstrap/Carousel'
-import { Parallax } from 'react-scroll-parallax';
+import Media from 'react-media';
+// import { Parallax } from 'react-scroll-parallax';
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
-import IMG from "gatsby-image"
+// import IMG from "gatsby-image"
 import "../styles/Locataire.css"
 import "../fonts/gt super/stylesheet.css"
 import "../components/realty_about_layout"
@@ -12,32 +13,33 @@ import ButtonSix from "../components/buttonSix"
 import ButtonSeven from "../components/buttonSeven"
 import ButtonEight from "../components/ButtonEight"
 import ButtonSevenB from "../components/buttonNine"
-import Contact_btn from "../components/Contact_btn"
-import Navbar from "../components/Navbar";
+// import Contact_btn from "../components/Contact_btn"
+// import Navbar from "../components/Navbar";
 
-import Home from './Home'
-import Realty from './'
-import Farm from './Farm'
+// import Home from './Home'
+// import Realty from './'
+// import Farm from './Farm'
 import Contact from './Contact'
-import Career from './Career'
-import RiskManagement from './RiskManagement'
+// import Career from './Career'
+// import RiskManagement from './RiskManagement'
 import Realtymobile from "../components/Realtymb";
 // import ScriptTag from 'react-script-tag';
-import  image_1  from "../images/REALTY/data0/images/image_1.jpg";
-import image_2 from '../images/REALTY/data0/images/image_2.jpg'
-import image_3 from '../images/REALTY/data0/images/image_3.jpg'
-import image_4 from '../images/REALTY/data0/images/image_4.jpg'
-import image_5 from '../images/REALTY/data0/images/image_5.jpg'
-import image_6 from '../images/REALTY/data0/images/image_6.jpg'
-import image_7 from '../images/REALTY/data0/images/image_7.jpg'
+// import  image_1  from "../images/REALTY/data0/images/image_1.jpg";
+// import image_2 from '../images/REALTY/data0/images/image_2.jpg'
+// import image_3 from '../images/REALTY/data0/images/image_3.jpg'
+// import image_4 from '../images/REALTY/data0/images/image_4.jpg'
+// import image_5 from '../images/REALTY/data0/images/image_5.jpg'
+// import image_6 from '../images/REALTY/data0/images/image_6.jpg'
+// import image_7 from '../images/REALTY/data0/images/image_7.jpg'
 
 import image_1a from '../images/REALTY/all types/900_1199/office-881758.jpg'
-import image_2b from '../images/REALTY/data0/tooltips/image_2.jpg'
+// import image_2b from '../images/REALTY/data0/tooltips/image_2.jpg'
 import image_3c from '../images/REALTY/all types/900_1199/pexels-tomek-mądry.jpg'
-import image_4d from '../images/REALTY/data0/tooltips/image_4.jpg'
-import image_5e from '../images/REALTY/data0/tooltips/image_5.jpg'
+// import image_4d from '../images/REALTY/data0/tooltips/image_4.jpg'
+// import image_5e from '../images/REALTY/data0/tooltips/image_5.jpg'
 import image_6f from '../images/REALTY/all types/900_1199/single-family-home.jpg'
-import image_7g from '../images/REALTY/data0/tooltips/image_7.jpg'
+import RealtyServices from "../components/RealtyServices";
+// import image_7g from '../images/REALTY/data0/tooltips/image_7.jpg'
 
 
 
@@ -72,6 +74,21 @@ export default function RealEstate() {
   // const image_7g = require("../images/REALTY/data0/tooltips/image_7.jpg");
 
 
+function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
+  const [matches, setMatches] = useState(defaultMatches)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    if (media.matches !== matches) setMatches(media.matches                                                                                                                                                                                                                               )
+    const listener = () => setMatches(media.matches)
+    media.addListener(listener)
+
+    
+  }, [query])
+
+  return matches
+
+}
 
 
 
@@ -96,20 +113,8 @@ export default function RealEstate() {
       }
     }
 
-    flagCountry: file(
-      relativePath: { eq: "canada_USA.jpg" }
-    ) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
+    
 
-    flag: file(relativePath: {eq: "Realty/canada_USA.jpg", glob: ""}, childImageSharp: {fluid: {}}) {
-      id
-    }
-  
 
   mobileTwo: file(
     relativePath: { eq: "REALTY/mobile/homeTwo.jpg" }
@@ -178,7 +183,7 @@ export default function RealEstate() {
                   </p>
                   </div>
                     
-
+                  <section id="header-bottomLeftContent">
                   <div className="realEstate_getMoreInfoBtn">
                     <ButtonSevenB name="learn more" />
                   </div>
@@ -186,6 +191,7 @@ export default function RealEstate() {
                   <div className="realEstate_flag-wrap">
                       <div className="realEstate_flag" />
                     </div>
+                    </section>
                 </div>
               </div>
 
@@ -232,6 +238,8 @@ export default function RealEstate() {
             </section>
           </header>
           {/* ABOUT LOCATAIRE */}
+
+          <main id="main-realtyContainer" >
           <div className="realty" id="realty_about">
             <header className="realty__heading">
               <div className="realty__image-svgThree">
@@ -293,7 +301,7 @@ export default function RealEstate() {
                       <div className="realty__leftBtn">
                         <ButtonSeven name="learn more" />
                       </div>
-                      <div className="realty__rightBtn">
+                      <div className="realty__rightBtn hidden">
                         <ButtonSix name="contact us" />
                       </div>
                     </div>
@@ -342,8 +350,8 @@ export default function RealEstate() {
                       className="realty__content_buttonWrap"
                       id="realty__content_buttonWrap"
                     >
-                      <div className="realty__leftBtn">
-                        <ButtonSeven name="learn more" />
+                      <div className="realty__leftBtn hidden">
+                        <ButtonSeven name="learn more " />
                       </div>
                       <div className="realty__rightBtn">
                         <ButtonSix name="contact us" />
@@ -361,32 +369,21 @@ export default function RealEstate() {
           <br />
 
           {/* TABLET */}
-          <main className="investment_service">
-            <section className="investment_service-main">
-              <div className="investment_service-inner_img">
-                <div className="investment_service-image" />
-              </div>
-
-              <div className="investment_service-content">
-                <div className="investment_service-header">
-                  <h1 style={{ marginBlockStart: "none" }}>investment service</h1>
-                </div>
-                <div className="investment_service-text">
-                  <p>
-                    Locataire offers to prospective partners opportunities
-                    to invest in dozens of high-growth residential and
-                    commercial properties in the United States, and Canada.
-              </p>
-                  <p>
-                    We leverage experience and local market knowledge to
-                    produce top quality risk-adjusted returns for investors.
-              </p>
-                </div>
-              </div>
-            </section>
+          <main className="investment_service" style={{position: 'relative'}}>
+          <Media query="(min-width: 900px)">
+              {matches => {
+                return matches ? 
+                
+                <>
+                "HELLO"
+                </>
+                : 
+                "HI"
+              }}
+            </Media>
           </main>
-
-          <div className="realty_services">
+            
+           <div className="realty_services">
             <span className="realty_services-svg"></span>
             <div className="realty__services-svgDivider"></div>
             <section className="realty_services-header">
@@ -549,7 +546,10 @@ export default function RealEstate() {
                 <div className="realty_services-option-decoration"></div>
               </div>
             </div>
-          </div>
+          </div> 
+
+          {/*  */}
+          
           <br />
           <br />
           <br />
@@ -774,6 +774,9 @@ export default function RealEstate() {
               </div>
             </div>
           </div>
+          
+          </main>
+          
           <Contact />
         </div>
     </>

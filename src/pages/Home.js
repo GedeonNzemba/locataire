@@ -1,5 +1,4 @@
 import React from "react"
-import RealtyFarmLayout from "../components/realty_farm_layout"
 // import Navbar from "../components/Navbar"
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // import RealEstate from "./RealEstate"

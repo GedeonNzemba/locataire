@@ -1,13 +1,13 @@
 import React, { useEffect } from "react"
 import Helmet from "react-helmet"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Navbar from "../components/Navbar"
 
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+// import Layout from "../components/layout"
+// import Image from "../components/image"
+// import SEO from "../components/seo"
 
 import Home from "../pages/Home"
 import Farm from "../pages/Farm"
@@ -15,7 +15,7 @@ import Contact from "../pages/Contact"
 import Career from "../pages/Career"
 import RiskManagement from "../pages/RiskManagement"
 import RealEstate from "../pages/RealEstate"
-import Slick from "../components/Slick"
+// import Slick from "../components/Slick"
 
 
 
@@ -82,7 +82,7 @@ const IndexPage = () => {
           <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
           
         </Helmet>
-        <Router>
+        {/* <Router>
           <Navbar />
           <Switch>
             <Route path="/home" component={Home} />
@@ -92,8 +92,8 @@ const IndexPage = () => {
             <Route path="/career" component={Career} />
             <Route path="/riskmanagement" component={RiskManagement} />
           </Switch>
-        </Router>
-      
+        </Router> */}
+      <RealEstate />
     </>
    
   )
