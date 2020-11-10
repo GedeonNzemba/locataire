@@ -510,10 +510,10 @@ html::-webkit-scrollbar {
                     padding-right: 2.5em;
 
                    
-                    @media (min-width: 900px) and (max-width: 1299px) {
-                        padding-top: calc(48px + (280 - 48) * (100vw - 900px) / (1299 - 900))!important;
+                    // @media (min-width: 900px) and (max-width: 1299px) {
+                    //     padding-top: calc(48px + (280 - 48) * (100vw - 900px) / (1299 - 900))!important;
 
-                    }
+                    // }
                    
                     @include for-tablet-landscape-only {
                         padding-top: 25rem;
