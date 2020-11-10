@@ -9167,12 +9167,12 @@ a:hover {
 .realty__services-svgDivider {
   background-image: url("../images/REALTY/Group9.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 199.59px;
-  height: 450.25px;
+  background-size: contain;
+  width: 11.111rem;
+  height: 50.028rem;
   position: absolute;
-  top: -30px;
-  left: 39%;
+  top: calc((-3.333rem) + ((-2.333) - (-3.333)) * (100vw - 100rem) / (133.222 - 100));
+  left: calc(47rem + (64 - 47) * (100vw - 100rem) / (133.222 - 100));
   -webkit-transform: rotate(8deg) rotateX(45deg);
           transform: rotate(8deg) rotateX(45deg);
   z-index: 9999;
@@ -9612,6 +9612,123 @@ div.realty_services-option div.realty_services-option--boxContainer div.realty__
 
 div.realty_services-option div.realty_services-option--boxContainer div.realty__services-option--innerBox div.realty_services-option--content div.realty__services-option-itemTitle#services-option-itemTitle-long::-webkit-scrollbar {
   display: none;
+}
+
+.realty-container {
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.realty-container.right-hand-container {
+  margin-top: 12rem;
+}
+
+.realty-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.realty-content.right-hand {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.realty-content_left {
+  width: 40vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #FFFFFF;
+  padding: 2rem 3rem;
+  border-left: outset;
+  border-right: none !important;
+  color: #313962;
+  padding-right: unset;
+  margin-right: 2rem;
+}
+
+.realty-content_left h1 {
+  color: inherit;
+  font-family: "GT Super Ds Trial Bd";
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 0.45px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  margin-bottom: 2rem;
+  padding-right: 3rem;
+}
+
+.realty_services_content-paragraph p {
+  font-family: "Ginto regular";
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.45px;
+  font-size: 1.5rem;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.realty_services_content-paragraph p:first-child {
+  margin-bottom: 2rem;
+}
+
+.realty-content_right {
+  width: 40vw;
+  height: 30rem;
+  background: burlywood;
+}
+
+.realty-content_right {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("https://cdn.pixabay.com/photo/2018/03/21/16/18/investment-3247252_960_720.jpg");
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 32% 220%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 9;
+}
+
+.realty_services_content-paragraph {
+  padding-left: 3rem;
+  padding-right: 5rem;
+}
+
+.realty_services_content-paragraph p {
+  color: #484848;
+  font-family: "Ginto regular";
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 0.45px;
 }
 
 body,
@@ -10894,6 +11011,14 @@ html::-webkit-scrollbar {
     margin-block-start: 0;
     font-size: 2.5rem;
     color: #000;
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel {
+    border: none !important;
+    width: 90vw;
+    margin: 0 auto;
   }
 }
 

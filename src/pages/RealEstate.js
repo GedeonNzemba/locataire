@@ -370,7 +370,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
           {/* TABLET */}
           <main className="investment_service" style={{position: 'relative'}}>
-          <Media query="(min-width: 900px)">
+          {/* <Media query="(min-width: 900px)">
               {matches => {
                 return matches ? 
                 
@@ -380,10 +380,262 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                 : 
                 "HI"
               }}
-            </Media>
+            </Media> */}
           </main>
+
+
+            <div className="realty-container">
+              <div className="realty-content">
+              <div className="realty__services-svgDivider"></div>
+                <div className="realty-content_left">
+                  <h1>investment service</h1>
+                  <div className="realty_services_content-paragraph">
+                    <p>
+                      Locataire offers to prospective partners opportunities
+                      to invest in dozens of high-growth residential and
+                      commercial properties in the United States, and Canada.
+                    </p>
+                      
+                    <p>
+                      We leverage experience and local market knowledge to
+                      produce top quality risk-adjusted returns for investors.
+                    </p>
+                </div>
+                </div>
+                <div className="realty-content_right">
+                  
+                </div>
+              </div>
+
+
+               {/* SLIDER A */}
+
+               <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Identify undervalue real estate properties
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Property acquisition                       </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Leases administration
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Renovation and remodeling                       </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Implement strategic capital and operational programs to increase cashflow                       </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Reduce overall risk
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Evictions proceedings
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Possession of leased premises
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Financial reporting
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+            </div>
+
+              {/* SLIDER A ENDS */}
+            </div>
+
+
+            <div className="realty-container right-hand-container">
+              <div className="realty-content right-hand">
+              <div className="realty__services-svgDivider"></div>
+                <div className="realty-content_left">
+                  <h1>investment service</h1>
+                  <div className="realty_services_content-paragraph">
+                    <p>
+                      Locataire offers to prospective partners opportunities
+                      to invest in dozens of high-growth residential and
+                      commercial properties in the United States, and Canada.
+                    </p>
+                      
+                    <p>
+                      We leverage experience and local market knowledge to
+                      produce top quality risk-adjusted returns for investors.
+                    </p>
+                </div>
+                </div>
+                <div className="realty-content_right">
+                  
+                </div>
+              </div>
+
+
+               {/* SLIDER A */}
+
+               <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Identify undervalue real estate properties
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Property acquisition                       </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Leases administration
+                      </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Renovation and remodeling                       </p>
+                      </div>
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Implement strategic capital and operational programs to increase cashflow                       </p>
+                      </div>
+                    </div>
+                </div>
+
+                <div className="carousel-cell">
+                <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Reduce overall risk
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Evictions proceedings
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Possession of leased premises
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell">
+                    <div className="realEstate-invest__item">
+                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
+                      <div className="realEstate-invest__item-content">
+                        <p>
+                          Financial reporting
+                      </p>
+                      </div>
+                    </div>
+                    </div>
+            </div>
+
+              {/* SLIDER A ENDS */}
+            </div>
+
+
+
+
             
-           <div className="realty_services">
+           <div className="realty_services" style={{display: 'none'}} >
             <span className="realty_services-svg"></span>
             <div className="realty__services-svgDivider"></div>
             <section className="realty_services-header">
@@ -548,13 +800,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
             </div>
           </div> 
 
-          {/*  */}
-          
-          <br />
-          <br />
-          <br />
-          <br /> {/* LEFT */}
-          <div className="realty_services">
+          <div className="realty_services" style={{display: 'none'}}>
             <span className="realty_services-svg realty__services-svgLeft"></span>
             <div className="realty__services-svgDivider realty__services-svgDividerLeft"></div>
             <section className="realty_services-header realty_services-headerLeft">

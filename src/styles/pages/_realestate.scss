@@ -1038,7 +1038,13 @@ main.investment_service {
   
  
   
-
+@include for-tablet-landscape-up {
+    .carousel {
+        border: none!important;
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
 @media (max-width: 1199px) {
     // FLICKITY SLIDER
 .carousel {

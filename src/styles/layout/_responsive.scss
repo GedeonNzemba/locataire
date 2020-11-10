@@ -2249,12 +2249,12 @@ a:hover {
  .realty__services-svgDivider {
   background-image: url("../images/REALTY/Group9.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 199.59px;
-  height: 450.25px;
+  background-size: contain;
+  width: 11.111rem;
+  height: 50.028rem;
   position: absolute;
-  top: -30px;
-  left: 39%;
+  top:  calc((-3.333rem) + ((-2.333) - (-3.333)) * (100vw - 100rem) / (133.222 - 100));;
+  left: calc(47rem + (64 - 47) * (100vw - 100rem) / (133.222 - 100));
   transform: rotate(8deg) rotateX(45deg);
   z-index: 9999;
 
@@ -2603,8 +2603,107 @@ div.realty_services-option {
   }
 }
 
+.realty-container {
+  // width: 80vw;
+  background: $white;
+  // margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rem;
+  justify-content: center;
+
+  &.right-hand-container {
+    margin-top: 12rem;
+  }
+}
 
 
+.realty-content {
+    // width: 80vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 10rem;
+
+    &.right-hand {
+      flex-direction: row-reverse;
+    }
+
+}
+
+
+.realty-content_left {
+    width: 40vw;
+    height: fit-content;
+    background: $white;
+    padding: 2rem 3rem;
+    border-left: outset;
+    border-right: none!important;
+    color: $bluethick;
+    padding-right: unset;
+    margin-right: 2rem;
+
+    & h1 {
+      color: inherit;
+        font-family: "GT Super Ds Trial Bd";
+        font-weight: bold;
+        text-align: left;
+        letter-spacing: 0.45px;
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-block-start: 0;
+        margin-bottom: 2rem ;
+        padding-right: 3rem;
+    }
+}
+
+.realty_services_content-paragraph {
+   p {
+      font-family: "Ginto regular";
+      font-weight: 400;
+      text-align: left;
+      letter-spacing: 0.45px;
+      font-size: 1.5rem;
+      margin-block-start: 0;
+    }
+
+    & p:first-child {
+      margin-bottom: 2rem;
+    }
+}
+
+.realty-content_right {
+  width: 40vw;
+  height: 30rem;
+  background: burlywood;
+}
+
+.realty-content_right {
+    // background-color: #f00;
+    box-sizing: border-box;
+    background-image: url("https://cdn.pixabay.com/photo/2018/03/21/16/18/investment-3247252_960_720.jpg");
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 32% 220%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    position: relative;
+    z-index: 9;
+}
+
+.realty_services_content-paragraph {
+  padding-left: 3rem;
+  padding-right: 5rem;
+
+  & p {
+    color: #484848;
+    font-family: "Ginto regular";
+      font-weight: normal;
+      text-align: left;
+      letter-spacing: 0.45px;
+  }
+}
 
 
 
