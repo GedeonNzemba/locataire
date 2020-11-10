@@ -11015,7 +11015,7 @@ html::-webkit-scrollbar {
 }
 
 @media (min-width: 900px) {
-  .carousel {
+  #carousel {
     border: none !important;
     width: 90vw;
     margin: 0 auto;

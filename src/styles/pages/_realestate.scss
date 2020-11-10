@@ -1039,7 +1039,7 @@ main.investment_service {
  
   
 @include for-tablet-landscape-up {
-    .carousel {
+    #carousel {
         border: none!important;
         width: 90vw;
         margin: 0 auto;

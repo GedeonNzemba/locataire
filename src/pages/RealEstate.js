@@ -534,7 +534,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
                {/* SLIDER A */}
 
-               <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+               <div className="carousel" id="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
                 <div className="carousel-cell">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
