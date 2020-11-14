@@ -10261,4 +10261,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 780px;
+}
+}
+
 /*# sourceMappingURL=bootstrap.css.map */

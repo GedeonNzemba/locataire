@@ -28,6 +28,12 @@ h6,
 p {
   text-rendering: optimizeLegibility;
 }
+
+p {
+  font-family: "Ginto bold";
+        font-weight: 400;
+        font-style: normal;
+}
 html::-webkit-scrollbar {
   display: none;
 }
@@ -441,7 +447,7 @@ html::-webkit-scrollbar {
       }
 
       & div.realty_services_content-banner {
-        background-image: url("../images/REALTY/smallhousebanner.jpg");
+        background-image: url("../images/REALTY/canada_USA.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 595px;
@@ -828,7 +834,7 @@ html::-webkit-scrollbar {
       }
 
       & div.realty_services_content-banner {
-        background-image: url("../images/REALTY/smallhousebanner.jpg");
+        background-image: url("../images/REALTY/canada_USA.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 595px;

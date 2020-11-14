@@ -1,4 +1,7 @@
 import React from "react"
+import Carousel from 'react-bootstrap/Carousel'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 import { useStaticQuery, graphql } from "gatsby"
 import IMG from "gatsby-image"
 import "../styles/Locataire.css"
@@ -19,6 +22,18 @@ import image_4 from '../images/REALTY/all types/estate_4.jpg'
 import image_5 from '../images/REALTY/all types/estate_5.jpg'
 import image_6 from '../images/REALTY/all types/estate_6.jpg'
 import SlickProperty from "./SlickProperty";
+import { Col } from "react-bootstrap";
+import { GiContract, GiAutoRepair } from 'react-icons/gi';
+import { FaChartLine } from 'react-icons/fa';
+import { RiSkullFill, RiCriminalLine } from 'react-icons/ri';
+import { HiUserRemove, HiDocumentReport } from 'react-icons/hi';
+import { BsHouseFill } from 'react-icons/bs';
+import {FcAdvertising, FcInspection} from 'react-icons/fc'
+import Media from 'react-bootstrap/Media';
+import {GrVmMaintenance, GrSystem} from 'react-icons/gr';
+import {FaBullhorn, FaTimes, FaHands, FaHammer, FaAtlas, FaCogs} from 'react-icons/fa';
+import  '../styles/hover.css';
+
 
 export default function Realtymobile() {
 
@@ -249,159 +264,155 @@ export default function Realtymobile() {
               {/* SLIDER A */}
 
               <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Identify undervalue real estate properties
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex hvr-icon-forward">
+                            <i class="fas fa-search-dollar hvr-icon"></i>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Identify undervalue real estate properties
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Property acquisition                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                          <i class="fab fa-acquisitions-incorporated hvr-icon"></i>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Property acquisition                 
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Leases administration
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <GiContract className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8} className="padding-left">
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Leases administration            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Renovation and remodeling                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <GiAutoRepair className="hvr-icon" />
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Renovation and remodeling              
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Implement strategic capital and operational programs to increase cashflow                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaChartLine className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p className="lg-off">
+                                Capital and operational programs to increase cashflow            
+                              </p>
+                              <p className="xm-on">
+                                Capital & operational programs to increase cashflow            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
 
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Reduce overall risk
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <RiSkullFill className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Reduce overall risk            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
+                    <div className="carousel-cell ">
+                    <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Evictions proceedings
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <HiUserRemove className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Evictions proceedings          
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Possession of leased premises
-                      </p>
-                      </div>
-                    </div>
-                    </div>
+            
 
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Financial reporting
-                      </p>
-                      </div>
-                    </div>
-                    </div>
+                
             </div>
 
               {/* SLIDER A ENDS */}
-
-              {/* <div className="realEstate-invest__services">
-                <div className="reaalEstate-invest_content">
-                  <div className="realEstate-invest__item-Wrap">
-
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Identify undervalue real estate properties
-                      </p>
-                      </div>
-                    </div>
-
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Property acquisition                       </p>
-                      </div>
-                    </div>
-
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Renovation and remodeling                       </p>
-                      </div>
-                    </div>
-
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Implement strategic capital and operational programs to increase cashflow                       </p>
-                      </div>
-                    </div>
-
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-five realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Implement strategic capital and operational programs to increase cashflow
-                      </p>
-                      </div>
-                    </div>
-
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Reduce overall risk
-                      </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
             </section>
+
+
 
             {/* PROPERTY MANAGEMENT */}
             <section className="realEstate-title" id="realEstate-title">
@@ -482,100 +493,184 @@ export default function Realtymobile() {
                 </div>
               </div>
 
-              {/* SLIDER A */}
+              {/* SLIDER A HERE*/}
 
               <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell hvr-overline-from-center">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-one_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Advertising and filling vacancies                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex hvr-icon-forward">
+                            <FaBullhorn className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Advertising and filling vacancies
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-two_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Tenant screening (credit, criminal background)
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                          <RiCriminalLine className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Tenant screening (credit, criminal background)               
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Leases administration
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <GiContract className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Leases administration            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-four_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Move-in inspection walkthrough
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FcInspection className="hvr-icon" />
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Move-in inspection walkthrough              
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
                     </div>
                 </div>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-five_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Rent payment
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaCogs className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Repairs & maintenance            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
 
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+                <div className="carousel-cell ">
+                <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-six_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Repairs & maintenance
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaAtlas className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Vendor management           
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
+                    <div className="carousel-cell ">
+                    <div className="realEstate-invest__item hvr-overline-from-center">
+                      <div className="realEstate-invest__item-image-seven_b realEstate-invest__item-image--prop" />
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaTimes className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Evictions proceedings          
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </div>
+                    </div>
+
+                    <div className="carousel-cell ">
+                    <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Evictions proceedings
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaHands className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Possession of leased premises       
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                     
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
+                    <div className="carousel-cell ">
+                    <div className="realEstate-invest__item hvr-overline-from-center">
                       <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Possession of leased premises
-                      </p>
-                      </div>
-                    </div>
-                    </div>
-
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Financial reporting
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <HiDocumentReport className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Financial reporting      
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                     </div>
             </div>

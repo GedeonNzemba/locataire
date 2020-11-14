@@ -516,16 +516,16 @@ html::-webkit-scrollbar {
                     // }
                    
                     @include for-tablet-landscape-only {
+                        padding-top: 6rem;
+                    }
+
+                    @include for-xsmall-desktop-up {
                         padding-top: 25rem;
                     }
 
-                    @include for-xsmall-desktop-up {
-                        padding-top: 30rem;
-                    }
-
-                    @include for-xsmall-desktop-up {
-                        padding-top: 30rem;
-                    }
+                    // @include for-xsmall-desktop-up {
+                    //     padding-top: 30rem;
+                    // }
 
                     // @media (min-width: 1200px) {
                     //     padding-top: calc(120px + (150 - 120) * (100vw - 1200px) / (1365 - 1200));
@@ -536,7 +536,7 @@ html::-webkit-scrollbar {
                     }
 
                     @media (min-width: 1024px) and (max-width: 1199px) {
-                        padding-top: 25rem;
+                        padding-top: 15rem;
                     }
 
                     @media (min-width: 1300px) {
@@ -1052,8 +1052,8 @@ main.investment_service {
   }
   
   .carousel-cell {
-    width: 50%;
-    height: 250px;
+    width: auto;
+    height: auto;
     margin-right: 10px;
     // background: #8C8;
     border-radius: 5px;
@@ -1067,7 +1067,7 @@ main.investment_service {
     }
 
     .flickity-viewport {
-        height: 31.25rem!important;
+        height: 37.5rem!important;
     }
 
 }

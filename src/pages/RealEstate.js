@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Carousel from 'react-bootstrap/Carousel'
-import Media from 'react-media';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+// import Media from 'react-media';
 // import { Parallax } from 'react-scroll-parallax';
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
@@ -39,8 +41,19 @@ import image_3c from '../images/REALTY/all types/900_1199/pexels-tomek-mądry.jp
 // import image_5e from '../images/REALTY/data0/tooltips/image_5.jpg'
 import image_6f from '../images/REALTY/all types/900_1199/single-family-home.jpg'
 import RealtyServices from "../components/RealtyServices";
-// import image_7g from '../images/REALTY/data0/tooltips/image_7.jpg'
+import { Col } from "react-bootstrap";
+import { GiContract, GiAutoRepair } from 'react-icons/gi';
+import { FaChartLine } from 'react-icons/fa';
+import { RiSkullFill, RiCriminalLine } from 'react-icons/ri';
+import { HiUserRemove, HiDocumentReport } from 'react-icons/hi';
+import { BsHouseFill } from 'react-icons/bs';
+import {FcAdvertising, FcInspection} from 'react-icons/fc'
+import Media from 'react-bootstrap/Media';
+import {GrVmMaintenance, GrSystem} from 'react-icons/gr';
+import {FaBullhorn, FaTimes, FaHands, FaHammer, FaAtlas, FaCogs} from 'react-icons/fa';
+import  '../styles/hover.css';
 
+// import image_7g from '../images/REALTY/data0/tooltips/image_7.jpg'
 
 
 
@@ -385,8 +398,31 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
 
             <div className="realty-container">
+              {/* <Helmet>
+              <link rel="stylesheet"
+                      href=
+                      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+                      crossorigin="anonymous"></link>
+              </Helmet> */}
+
               <div className="realty-content">
-              <div className="realty__services-svgDivider"></div>
+
+              <Container className="property-container">
+              <Row className="justify-content-md-center investS">
+                <Col md={8}>
+                  <div className="invest-img" />
+                </Col>
+                <Col md={4} className="realty-content_left border_right">
+                    <h1>investment service</h1>
+                    <p>
+                      Locataire offers to prospective partners opportunities
+                      to invest in dozens of high-growth residential and
+                      commercial properties in the United States, and Canada.
+                    </p>
+                </Col>
+              </Row>
+            </Container>
+              {/* <div className="realty__services-svgDivider"></div>
                 <div className="realty-content_left">
                   <h1>investment service</h1>
                   <div className="realty_services_content-paragraph">
@@ -396,120 +432,286 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                       commercial properties in the United States, and Canada.
                     </p>
                       
-                    <p>
-                      We leverage experience and local market knowledge to
-                      produce top quality risk-adjusted returns for investors.
-                    </p>
+                   
                 </div>
                 </div>
                 <div className="realty-content_right">
                   
-                </div>
+                </div> */}
               </div>
+
+              <Container className="display_off">
+                <Row>
+                  <Col>
+                    <div className="p1_img" />
+                  </Col>
+                  <Col className="sub_text-p1">
+                    <p className="p1">
+                      We leverage experience and local market knowledge to
+                      produce top quality risk-adjusted returns for investors.
+                    </p>
+                  </Col>
+                </Row>
+              </Container>
 
 
                {/* SLIDER A */}
 
-               <div className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-                <div className="carousel-cell">
-                <div className="realEstate-invest__item">
+               <div className="carousel" id="carousel-investor" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div className="carousel-cell hvr-underline-from-left hvr-underline-from-center">
+                <div className="realEstate-invest__item ">
                       <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Identify undervalue real estate properties
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex hvr-icon-forward">
+                            <i class="fas fa-search-dollar hvr-icon"></i>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Identify undervalue real estate properties
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Property acquisition                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                          <i class="fab fa-acquisitions-incorporated hvr-icon"></i>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Property acquisition                 
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
+                     
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Leases administration
-                      </p>
-                      </div>
+                      
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <GiContract className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Leases administration            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
+                      
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Renovation and remodeling                       </p>
-                      </div>
+                      
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <GiAutoRepair className="hvr-icon" />
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Renovation and remodeling              
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
+                     
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Implement strategic capital and operational programs to increase cashflow                       </p>
-                      </div>
+                      
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaChartLine className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Implement strategic capital and operational programs to increase cashflow            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
                     </div>
                 </div>
 
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Reduce overall risk
-                      </p>
-                      </div>
+                     
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <RiSkullFill className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Reduce overall risk            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                     
+                     
+                      
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
+                    <div className="carousel-cell hvr-underline-from-left">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Evictions proceedings
-                      </p>
-                      </div>
+                      
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <HiUserRemove className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Evictions proceedings          
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                      
+                      
+                     
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
+                    <div className="carousel-cell hvr-underline-from-left">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Possession of leased premises
-                      </p>
-                      </div>
+                     
+                      <Container className="invest-container container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <BsHouseFill className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Possession of leased premises       
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                     
+                     
+                     
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
-                    <div className="realEstate-invest__item">
-                      <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Financial reporting
-                      </p>
-                      </div>
-                    </div>
-                    </div>
+                  
             </div>
 
               {/* SLIDER A ENDS */}
             </div>
 
 
-            <div className="realty-container right-hand-container">
-              <div className="realty-content right-hand">
+            <div className="realty-container right-hand-container" id="realty-content">
+
+
+            <div className="realty-content realty-content_sec" >
+              
+            <Container className="property-container">
+              <Row className="justify-content-md-center">
+                <Col md={8}>
+                  <div className="property-img" />
+                </Col>
+                <Col md={4} className="realty-content_left">
+                    <h1>Property management</h1>
+                    <p>
+                      Locataire real estate property managers offer hands-on
+                      experience management of single-family homes,
+                      multi-family homes, condominiums, townhouses, and
+                      commercial properties.
+                    </p>
+                </Col>
+              </Row>
+            </Container>
+
+              
+              
+                </div>
+              </div>
+
+              
+            <Container className="margin_btm">
+              <Row>
+                <Col>
+                  <Media>
+                    <img
+                      width={128}
+                      height={128}
+                      className="mr-3"
+                      src={require('../images/REALTY/all types/house_purshase.jpg')}
+                      alt="Generic placeholder"
+                    />
+                    <Media.Body>
+                      <h5 className="media_title">Property management services include the following:</h5>
+                      <p style={{fontSize: '2rem'}}>
+                        Whether you own one unit or many in an apartment building, our agents can assist you maximize profit and keep operating expenses low.
+                      </p>
+                      <br />
+                    </Media.Body>
+                  </Media>
+
+                  <p style={{fontSize: '2rem'}}>
+                  Our objective is to maximize the total return to property owners, through strategic acquisition, re-development, re-lease and management of these properties for maximum cash flow. We get paid after you get paid. Which means, if we don’t collect rent as agreed, you don’t pay us a management fee.
+                  </p>
+                </Col>
+              </Row>
+            </Container>
+
+              <Container className="display_off">
+                <Row>
+                  <Col>
+                    <div className="p1_img" />
+                  </Col>
+                  <Col className="sub_text-p1">
+                    <p className="p1">
+                    our agents can assist you maximize profit
+                    and keep operating expenses low.
+                    </p>
+                  </Col>
+                </Row>
+              </Container>
+              {/* <div className="realty-content right-hand">
               <div className="realty__services-svgDivider"></div>
                 <div className="realty-content_left">
                   <h1>investment service</h1>
@@ -520,116 +722,207 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                       commercial properties in the United States, and Canada.
                     </p>
                       
-                    <p>
-                      We leverage experience and local market knowledge to
-                      produce top quality risk-adjusted returns for investors.
-                    </p>
+                   
                 </div>
                 </div>
                 <div className="realty-content_right">
                   
                 </div>
-              </div>
+              </div> */}
+
+              {/* <div className="p2">
+              <p>
+                      We leverage experience and local market knowledge to
+                      produce top quality risk-adjusted returns for investors.
+                    </p>
+              </div> */}
 
 
                {/* SLIDER A */}
 
                <div className="carousel" id="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-center">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-one realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Identify undervalue real estate properties
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex hvr-icon-forward">
+                            <FaBullhorn className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Advertising and filling vacancies
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                     
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-two realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Property acquisition                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                          <RiCriminalLine className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Tenant screening (credit, criminal background)               
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-three_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Leases administration
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <GiContract className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Leases administration            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-three realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Renovation and remodeling                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FcInspection className="hvr-icon" />
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Move-in inspection walkthrough              
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-four realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Implement strategic capital and operational programs to increase cashflow                       </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaCogs className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Repairs & maintenance            
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                 </div>
 
-                <div className="carousel-cell">
+                <div className="carousel-cell hvr-underline-from-left">
                 <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-six realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Reduce overall risk
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaAtlas className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Vendor management           
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
+                    <div className="carousel-cell hvr-underline-from-left">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-eight_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Evictions proceedings
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaTimes className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Evictions proceedings          
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
+                    <div className="carousel-cell hvr-underline-from-left">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-nine_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Possession of leased premises
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <FaHands className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                                Possession of leased premises       
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                     
                     </div>
                     </div>
 
-                    <div className="carousel-cell">
+                    <div className="carousel-cell hvr-underline-from-left">
                     <div className="realEstate-invest__item">
                       <div className="realEstate-invest__item-image-ten_b realEstate-invest__item-image--prop" />
-                      <div className="realEstate-invest__item-content">
-                        <p>
-                          Financial reporting
-                      </p>
-                      </div>
+                      <Container className="container_height">
+                        <Row>
+                          <Col sm={4} className="icon-flex  hvr-icon-forward">
+                              <HiDocumentReport className="hvr-icon"/>
+                          </Col>
+                          <Col sm={8}>
+                            <div className="realEstate-invest__item-content">
+                              <p>
+                              	Financial reporting      
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                     
                     </div>
                     </div>
             </div>
 
               {/* SLIDER A ENDS */}
-            </div>
+            
 
 
 
@@ -651,21 +944,31 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                       crossorigin="anonymous"
                     />
                   </Helmet>
-                  <span className="realty_services_content-text-icon">
-                    <i class="fas fa-info-circle"></i>
-                  </span>
-                  <div className="realty_services_content-paragraph">
-                    Locataire offers to prospective partners opportunities
-                  <br />
-                  to invest in dozens of high-growth residential and
-                  <br />
-                  commercial properties in the United States, and Canada.
-                  <br />
-                    <br />
-                  We leverage experience and local market knowledge to
-                  <br />
-                  produce top quality risk-adjusted returns for investors.
-                </div>
+                  <Container className="realty_service--container">
+                    <Row>
+                      <Col sm={2}>
+                        <span className="realty_services_content-text-icon">
+                          <i class="fas fa-info-circle"></i>
+                        </span>
+                      </Col>
+                      <Col sm={10}>
+                      <div className="realty_services_content-paragraph">
+                        <p> 
+                          Locataire offers to prospective partners opportunities
+                          to invest in dozens of high-growth residential and
+                          commercial properties in the United States, and Canada.
+                        </p>
+                  
+                        <p>
+                          We leverage experience and local market knowledge to
+                          produce top quality risk-adjusted returns for investors.
+                        </p>
+                      </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                  
+                
                 </div>
 
                 <br />
@@ -678,8 +981,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                     <div className="services-subtitle">
                       <h3>
                         Real Estate investment services
-                      <br />
-                      include the following
+                      include the following.
                     </h3>
                     </div>
                   </div>
@@ -688,6 +990,43 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
               {/* image */}
               <div className="realty_services-image">
+              <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={require('../images/REALTY/condominium-690086.jpg')}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>Multifamily residential real estate</h3>
+      <p>Locataire Realty provides real estate services to prospective clients looking to buy, sell or lease residential and commercial real estates in the United States, and Canada.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={require('../images/REALTY/interior-3778708.jpg')}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Condominiums</h3>
+      <p>We leverage experience and local market knowledge to produce top quality risk-adjusted returns for investors. </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={require('../images/REALTY/all types/estate_5.jpg')}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Commercial</h3>
+      <p>We get paid after you get paid. Which means, if we don’t collect rent as agreed, you don’t pay us a management fee.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
                 <span className="realty_services-midsvg"></span>
               </div>
             </section>
@@ -813,17 +1152,11 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                   </span>
                   <div className="realty_services_content-paragraph">
                     Locataire real estate property managers offer hands-on
-                  <br />
-                  experience management of single-family homes,
-                  <br />
-                  multi-family homes, condominiums, townhouses, and
-                  <br />
-                  commercial properties.
-                  <br />
-                    <br />
-                  building, our agents can assist you maximize profit
-                  <br />
-                  and keep operating expenses low
+                    experience management of single-family homes,
+                    multi-family homes, condominiums, townhouses, and
+                    commercial properties.
+                    building, our agents can assist you maximize profit
+                    and keep operating expenses low
                 </div>
                 </div>
 
