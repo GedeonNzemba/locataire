@@ -63,7 +63,7 @@
 div.realty__image {
     @include item__img_wrap();
     width: 948px;
-    height: 723px;
+    // height: 723px;
     --image: url("../images/REALTY/all types/invest.jpg");
 
     @include for-phone-only {
@@ -108,7 +108,7 @@ div.realty__image {
 div.realty__image {
     @include item__img_wrap();
     width: 948px;
-    height: 723px;
+    // height: 723px;
     // --image: url('../images/Spaces/Desktop/spacesDesktopStudioPlus.jpg');
 
     @include for-phone-only {
@@ -186,13 +186,13 @@ div.realty__image {
     @include for-tablet-landscape-only {
         // --image: url('../images/Spaces/Mobile/spacesMobileStudioPlus.jpg');
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         .realty__about-img3 {
             // background-size: 100% 80%;
             background-size: 100% 100%;
             width: calc(450px + (599.5 - 450) * (100vw - 900px) / (1199 - 900));
-            height: 486.38px;
+            height: 48.638rem;
 
             @include for-ipad-pro-breakpoint {
                 background-size: cover;
@@ -207,7 +207,7 @@ div.realty__image {
 
     @include for-xsmall-desktop-only {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         .realty__about-img3 {
             background-size: 100% 100%;
@@ -223,7 +223,7 @@ div.realty__image {
         height: 556px;
 
         .realty__about-img3 {
-            background-size: 100%;
+            background-size: 100% 100%;
             width: calc(683px + (767.5 - 683) * (100vw - 1366px) / (1535 - 1366));
             // width: 100%;
         }
@@ -231,7 +231,7 @@ div.realty__image {
 
     @include for-medium-desktop-only {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         .realty__about-img3 {
             background-size: 100% 100%;
@@ -256,7 +256,7 @@ div.realty__image {
     //FROM 2559PX AND UP
     @include for-big-desktop-up {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         .realty__about-img3 {
             background-size: 100% 100%;
@@ -272,7 +272,7 @@ div.realty__image {
     & div.realty__about-img3 {
         @include for-small-desktop-only {
             width: 756px;
-            height: 360px;
+            // height: 360px;
         }
 
         @include for-phone-only {
@@ -314,11 +314,11 @@ div.realty__image {
 div.realty__image {
     @include item__img_wrap();
     width: 948px;
-    height: 723px;
+    // height: 723px;
     --image: url('../images/REALTY/all types/invest.jpg');
 
     &#realty__image-two {
-        --image: url('../images/REALTY/all types/architecture.jpg');
+        --image: url('../images/REALTY/all types/team_.jpg');
     }
 
     @include for-phone-only {
@@ -396,13 +396,13 @@ div.realty__image {
     @include for-tablet-landscape-only {
         // --image: url('../images/Spaces/Mobile/spacesMobileStudioPlus.jpg');
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         & div.realty__about-img3 {
             // background-size: 100% 80%;
             background-size: 100% 100%;
             width: calc(450px + (599.5 - 450) * (100vw - 900px) / (1199 - 900));
-            height: 486.38px;
+            height: 48.638rem;
 
             @include for-ipad-pro-breakpoint {
                 background-size: cover;
@@ -417,7 +417,7 @@ div.realty__image {
 
     @include for-xsmall-desktop-only {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         & div.realty__about-img3 {
             background-size: 100% 100%;
@@ -433,7 +433,7 @@ div.realty__image {
         height: 556px;
 
         & div.realty__about-img3 {
-            background-size: 100%;
+            background-size: 100% 100%;
             width: calc(683px + (767.5 - 683) * (100vw - 1366px) / (1535 - 1366));
             // width: 100%;
         }
@@ -441,7 +441,7 @@ div.realty__image {
 
     @include for-medium-desktop-only {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         & div.realty__about-img3 {
             background-size: 100% 100%;
@@ -454,7 +454,7 @@ div.realty__image {
     //FROM 1800PX TO 2559PX
     @include for-big-desktop-only {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         & div.realty__about-img3 {
             background-size: 100% 100%;
@@ -466,7 +466,7 @@ div.realty__image {
     //FROM 2559PX AND UP
     @include for-big-desktop-up {
         width: 50%;
-        height: 100%;
+        // height: 100%;
 
         & div.realty__about-img3 {
             background-size: 100% 100%;

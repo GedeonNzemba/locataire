@@ -34,12 +34,30 @@ import Realtymobile from "../components/Realtymb";
 // import image_6 from '../images/REALTY/data0/images/image_6.jpg'
 // import image_7 from '../images/REALTY/data0/images/image_7.jpg'
 
-import image_1a from '../images/REALTY/all types/900_1199/office-881758.jpg'
-// import image_2b from '../images/REALTY/data0/tooltips/image_2.jpg'
-import image_3c from '../images/REALTY/all types/900_1199/pexels-tomek-mądry.jpg'
-// import image_4d from '../images/REALTY/data0/tooltips/image_4.jpg'
-// import image_5e from '../images/REALTY/data0/tooltips/image_5.jpg'
-import image_6f from '../images/REALTY/all types/900_1199/single-family-home.jpg'
+import woman_a from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_899.jpg"
+import woman_b from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1011.jpg"
+import woman_c from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1114.jpg"
+import woman_d from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1211.jpg"
+import woman_e from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1294.jpg"
+import woman_f from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1404.jpg"
+import woman_g from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1495.jpg"
+import woman_h from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1639.jpg"
+import woman_i from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1643.jpg"
+import woman_j from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1728.jpg"
+import woman_k from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1810.jpg"
+import woman_l from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_1990.jpg"
+import woman_m from "../images/REALTY/desktop/woman_glasses/woman_glasses_c_scale,w_2400.jpg"
+
+
+
+
+
+// import image_1a from '../images/REALTY/all types/900_1199/office-881758.jpg'
+// // import image_2b from '../images/REALTY/data0/tooltips/image_2.jpg'
+// import image_3c from '../images/REALTY/all types/900_1199/pexels-tomek-mądry.jpg'
+// // import image_4d from '../images/REALTY/data0/tooltips/image_4.jpg'
+// // import image_5e from '../images/REALTY/data0/tooltips/image_5.jpg'
+// import image_6f from '../images/REALTY/all types/900_1199/single-family-home.jpg'
 import RealtyServices from "../components/RealtyServices";
 import { Col } from "react-bootstrap";
 import { GiContract, GiAutoRepair } from 'react-icons/gi';
@@ -52,6 +70,7 @@ import Media from 'react-bootstrap/Media';
 import {GrVmMaintenance, GrSystem} from 'react-icons/gr';
 import {FaBullhorn, FaTimes, FaHands, FaHammer, FaAtlas, FaCogs} from 'react-icons/fa';
 import  '../styles/hover.css';
+import My_navbar from "../components/My_navbar"
 
 // import image_7g from '../images/REALTY/data0/tooltips/image_7.jpg'
 
@@ -146,11 +165,13 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
   return (
     <>
         <Realtymobile />
-        <div className="realEstate">
+        {/* <My_navbar /> */}
+        <div className="realEstate onlyBtn">
           <Helmet>
             <script src="../static/wowslider.js" type="text/javascript" />
           </Helmet>
           {/* top header */}
+        
           <header className="realEstate_header" >
             <nav className="realEstate_navigation">
               <div className="realEstate_logoWrap">
@@ -161,13 +182,14 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
               </div>
               <div className="realEstate_navItem">
-                <ul>
+             
+                {/* <ul>
                   <li><a href="www.google.com" >home</a></li>
                   <li><a href="www.google.com" >real estate</a></li>
                   <li><a href="www.google.com" >livestock</a></li>
                   <li><a href="www.google.com" >risk management</a></li>
                   <li><a href="www.google.com">career</a></li>
-                </ul>
+                </ul> */}
               </div>
               <div className="realEstate_contactBtn">
                 <ButtonEight name="contact us" />
@@ -213,36 +235,63 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
               <Carousel>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src={image_1a}
+      className="d-block w-100 img_h img_w"
+      // src={image_1a}
       alt="First slide"
+      id="img_a"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
+      <h3 class="slide__header">First slide label</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </Carousel.Caption>
   </Carousel.Item>
+  {/* <Carousel.Item>
+    <picture>
+      <img
+      sizes="(max-width: 2400px) 100vw, 2400px"
+      srcset={
+        woman_a, 
+        woman_b,
+        woman_c,
+        woman_d,
+        woman_e,
+        woman_f,
+        woman_g,
+        woman_h,
+        woman_i,
+        woman_j,
+        woman_k,
+        woman_l,
+        woman_m 
+      }
+      src="woman_glasses_c_scale,w_2400.jpg"
+      alt="" />
+  </picture>
+  </Carousel.Item> */}
+
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src={image_3c}
+      className="d-block w-100 img_h img_w"
+      // src={image_3c}
       alt="Third slide"
+      id="img_b"
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
+      <h3 class="slide__header">Second slide label</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src={image_6f}
+      className="d-block w-100 img_h img_w"
+      // src={image_6f}
       alt="Third slide"
+      id="img_c"
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
+      <h3 class="slide__header">Third slide label</h3>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </Carousel.Caption>
   </Carousel.Item>
@@ -353,6 +402,8 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                           Our team understand financial services, wealth
                           management, and the extend of risks relative to return
                           on investment property owners are willing to withstand.
+                        </p>
+                        <p style={{ marginBottom: "0", marginTop: "1em" }} >
                           We are committed to helping our clients preserve wealth
                           for yourself, and your family, and to prepare for future
                           responsibilities as wealth owners and leaders.
@@ -554,7 +605,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                           <Col sm={8}>
                             <div className="realEstate-invest__item-content">
                               <p>
-                                Implement strategic capital and operational programs to increase cashflow            
+                               capital and operational programs to increase cashflow            
                               </p>
                             </div>
                           </Col>
@@ -925,10 +976,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
             
 
 
-
+              <div id="margin_top" />
 
             
-           <div className="realty_services" style={{display: 'none'}} >
+           <div className="realty_services" id="realty_services-margin"  style={{display: 'none'}} >
             <span className="realty_services-svg"></span>
             <div className="realty__services-svgDivider"></div>
             <section className="realty_services-header">
@@ -980,7 +1031,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                     <div className="realty_services-verticalLine"></div>
                     <div className="services-subtitle">
                       <h3>
-                        Real Estate investment services
+                        Locataire investment services
                       include the following.
                     </h3>
                     </div>
@@ -999,7 +1050,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
     />
     <Carousel.Caption>
       <h3>Multifamily residential real estate</h3>
-      <p>Locataire Realty provides real estate services to prospective clients looking to buy, sell or lease residential and commercial real estates in the United States, and Canada.</p>
+      <p className="front">Locataire Realty provides real estate services to prospective clients looking to buy, sell or lease residential and commercial real estates in the United States, and Canada.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -1011,7 +1062,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
     <Carousel.Caption>
       <h3>Condominiums</h3>
-      <p>We leverage experience and local market knowledge to produce top quality risk-adjusted returns for investors. </p>
+      <p className="front">We leverage experience and local market knowledge to produce top quality risk-adjusted returns for investors. </p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -1023,7 +1074,7 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
     <Carousel.Caption>
       <h3>Commercial</h3>
-      <p>We get paid after you get paid. Which means, if we don’t collect rent as agreed, you don’t pay us a management fee.</p>
+      <p className="front">We get paid after you get paid. Which means, if we don’t collect rent as agreed, you don’t pay us a management fee.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
@@ -1033,110 +1084,282 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
 
             <br />
 
-            <div className="realty_services-option">
-              <div className="realty_services-option-boxItem">
-                <ul>
-                  <li>
-                    <div className="realty_services-option--boxContainer">
-                      <div className="realty__services-option--innerBox">
-                        <div className="realty_services-option--imageContainer realty__services-option--imageOne"></div>
-                        <div className="realty_services-option--content">
-                          <div className="realty__services-option-icon">
-                            <i class="fas fa-search-location"></i>
+
+              <Container fluid id="down2k">
+                <Col>
+                  <Row className="slide_container">
+                    {/* ITEM CONTAINER */}
+                    <ul className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                    <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageOne"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-search-location"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Identify undervalue real estate properties
+                                  </p>
+                                  
+                              </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="realty__services-option-itemTitle">
-                            Identify undervalue real estate properties
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="realty_services-option--boxContainer">
-                      <div className="realty__services-option--innerBox">
-                        <div className="realty_services-option--imageContainer realty__services-option--imageTwo"></div>
-                        <div className="realty_services-option--content">
-                          <div className="realty__services-option-icon">
-                            <i class="fas fa-home"></i>
+                      </li>
+
+
+                      <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageTwo"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-home"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Property acquisition
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="realty__services-option-itemTitle">
-                            Property acquisition
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="realty_services-option--boxContainer">
-                      <div className="realty__services-option--innerBox">
-                        <div className="realty_services-option--imageContainer realty__services-option--imageThree"></div>
-                        <div className="realty_services-option--content">
-                          <div className="realty__services-option-icon">
-                            <i class="fas fa-house-damage"></i>
+                        </li>
+
+                        
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageThree"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-house-damage"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Renovation and remodeling
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="realty__services-option-itemTitle">
-                            Renovation and remodeling
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="realty_services-option--boxContainer">
-                      <div className="realty__services-option--innerBox">
-                        <div className="realty_services-option--imageContainer realty__services-option--imageFour"></div>
-                        <div className="realty_services-option--content">
-                          <div className="realty__services-option-icon">
-                            <i class="fas fa-chart-line"></i>
+                        </li>
+
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageFour"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div
+                                  className="realty__services-option-itemTitle"
+                                  id="services-option-itemTitle-long"
+                                >
+                                  <p>
+                                  capital and operational programs
+                                  to increase cashflow
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
                           </div>
-                          <div
-                            className="realty__services-option-itemTitle"
-                            id="services-option-itemTitle-long"
-                          >
-                            Implement strategic capital and operational programs
-                            to increase cashflow
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="realty_services-option--boxContainer">
-                      <div className="realty__services-option--innerBox">
-                        <div className="realty_services-option--imageContainer realty__services-option--imageFive"></div>
-                        <div className="realty_services-option--content">
-                          <div className="realty__services-option-icon">
-                            <i class="fas fa-tasks"></i>
+                        </li>
+
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageFive"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-tasks"></i>
+                                </div>
+                                <div
+                                  className="realty__services-option-itemTitle"
+                                  id="services-option-itemTitle-long"
+                                >
+                                  <p>
+                                  Implement effective asset management controls
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
                           </div>
-                          <div
-                            className="realty__services-option-itemTitle"
-                            id="services-option-itemTitle-long"
-                          >
-                            Implement effective asset management controls
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="realty_services-option--boxContainer">
-                      <div className="realty__services-option--innerBox">
-                        <div className="realty_services-option--imageContainer realty__services-option--imageSix"></div>
-                        <div className="realty_services-option--content">
-                          <div className="realty__services-option-icon">
-                            <i class="fas fa-balance-scale"></i>
+                        </li>
+
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageSix"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Reduce overall risk
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="realty__services-option-itemTitle">
-                            Reduce overall risk
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div className="realty_services-option-decoration"></div>
-              </div>
-            </div>
+                        </li>
+                    </ul>
+                    <div className="realty_services-option-decoration"></div> 
+                  </Row>
+                </Col>
+              </Container>
+
+
+
+
+
+              
+              <Container className="up2k-container">
+                <Row className="row-slider">
+                <ul >
+                    <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageOne"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-search-location"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Identify undervalue real estate properties
+                                  </p>
+                                  
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                      </li>
+
+
+                      <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageTwo"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-home"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Property acquisition
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageThree"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-house-damage"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Renovation and remodeling
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageFour"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div
+                                  className="realty__services-option-itemTitle"
+                                  id="services-option-itemTitle-long"
+                                >
+                                  <p>
+                                  capital and operational programs
+                                  to increase cashflow
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageFive"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-tasks"></i>
+                                </div>
+                                <div
+                                  className="realty__services-option-itemTitle"
+                                  id="services-option-itemTitle-long"
+                                >
+                                  <p>
+                                  Implement effective asset management controls
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div className="realty_services-option--boxContainer">
+                            <div className="realty__services-option--innerBox">
+                              <div className="realty_services-option--imageContainer realty__services-option--imageSix"></div>
+                              <div className="realty_services-option--content">
+                                <div className="realty__services-option-icon">
+                                  <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div className="realty__services-option-itemTitle">
+                                  <p>
+                                  Reduce overall risk
+
+                                  </p>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                    <div className="realty_services-option-decoration"></div> 
+                  </Row>
+                <Row className="row-bar">
+                  <div className="slide-bar" />
+                </Row>  
+                  
+              </Container>
+
+            
+
+            {/* =============================== */}
           </div> 
 
           <div className="realty_services" style={{display: 'none'}}>
@@ -1144,24 +1367,47 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
             <div className="realty__services-svgDivider realty__services-svgDividerLeft"></div>
             <section className="realty_services-header realty_services-headerLeft">
               {/* content */}
-              <div className="realty_services-content realty_services-contentLeft">
+              <div className="realty_services-content" id="realty_left-container">
                 <h1>property management</h1>
                 <div className="realty_services_content-text">
-                  <span className="realty_services_content-text-icon">
-                    <i class="fas fa-info-circle"></i>
-                  </span>
-                  <div className="realty_services_content-paragraph">
-                    Locataire real estate property managers offer hands-on
-                    experience management of single-family homes,
-                    multi-family homes, condominiums, townhouses, and
-                    commercial properties.
-                    building, our agents can assist you maximize profit
-                    and keep operating expenses low
-                </div>
+                  <Helmet>
+                    <link
+                      rel="stylesheet"
+                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+                      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+                      crossorigin="anonymous"
+                    />
+                  </Helmet>
+                  <Container className="realty_service--container">
+                    <Row>
+                      <Col sm={2}>
+                        <span className="realty_services_content-text-icon">
+                          <i class="fas fa-info-circle"></i>
+                        </span>
+                      </Col>
+                      <Col sm={10}>
+                      <div className="realty_services_content-paragraph">
+                        <p> 
+                        Locataire real estate property managers offer hands-on
+                        experience management of single-family homes,
+                        multi-family homes, condominiums, townhouses, and
+                        commercial properties.
+                        </p>
+                  
+                        <p>
+                        building, our agents can assist you maximize profit
+                        and keep operating expenses low.
+                        </p>
+                      </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                  
+                
                 </div>
 
                 <br />
-                <div className="realty_services_content-banner"></div>
+                <div className="realty_services_content-banner" id="realty_services_banner-left"></div>
 
                 <div className="realty_services-subContent">
                   <div className="realty_services-subsvg"></div>
@@ -1169,9 +1415,8 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                     <div className="realty_services-verticalLine"></div>
                     <div className="services-subtitle">
                       <h3>
-                        Property management services
-                      <br />
-                      include the following
+                        Locataire property management
+                      include the following.
                     </h3>
                     </div>
                   </div>
@@ -1179,19 +1424,55 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
               </div>
 
               {/* image */}
-              <div className="realty_services-image realty_services-imageLeft">
-                <span
-                  className="realty_services-midsvg"
-                  id="realty_services-midsvg-two"
-                ></span>
+              <div className="realty_services-image" id="realty_image-wrap">
+              <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={require('../images/REALTY/5f2737a12b490.jpg')}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>Multifamily residential real estate</h3>
+      <p className="front">Locataire Realty provides real estate services to prospective clients looking to buy, sell or lease residential and commercial real estates in the United States, and Canada.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={require('../images/REALTY/5f27347d39e82.jpg')}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Condominiums</h3>
+      <p className="front">We leverage experience and local market knowledge to produce top quality risk-adjusted returns for investors. </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={require('../images/REALTY/all types/office-881758.jpg')}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Commercial</h3>
+      <p className="front">We get paid after you get paid. Which means, if we don’t collect rent as agreed, you don’t pay us a management fee.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+                <span className="realty_services-midsvg"></span>
               </div>
             </section>
 
             <br />
 
-            <div className="realty_services-option">
-              <div className="realty_services-option-boxItem">
-                <ul>
+
+              <Container fluid id="down2k">
+                <Col>
+                  <Row className="slide_container">
+                <ul className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
                   <li>
                     <div className="realty_services-option--boxContainer">
                       <div className="realty__services-option--innerBox">
@@ -1201,7 +1482,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-search-location"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Advertising and filling vacancies
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1216,7 +1500,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-home"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Tenant screening (credit, criminal background)
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1231,7 +1518,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-house-damage"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Leases administration
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1249,7 +1539,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             className="realty__services-option-itemTitle"
                             id="services-option-itemTitle-long"
                           >
+                            <p>
                             Move-in inspection walkthrough
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1267,7 +1560,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             className="realty__services-option-itemTitle"
                             id="services-option-itemTitle-long"
                           >
+                            <p>
                             Rent payment
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1282,7 +1578,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-balance-scale"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Repairs & maintenance
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1297,7 +1596,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-balance-scale"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Vendor management
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1312,7 +1614,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-balance-scale"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Evictions proceedings
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1327,7 +1632,10 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-balance-scale"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Possession of leased premises
+
+                            </p>
                         </div>
                         </div>
                       </div>
@@ -1342,21 +1650,225 @@ function useMediaQuery(query, defaultMatches = window.matchMedia(query)) {
                             <i class="fas fa-balance-scale"></i>
                           </div>
                           <div className="realty__services-option-itemTitle">
+                            <p>
                             Financial reporting
+
+                            </p>
                         </div>
                         </div>
                       </div>
                     </div>
                   </li>
                 </ul>
+                </Row>
+                </Col>
+                </Container>
+
+                <Container className="up2k-container">
+                <Row className="row-slider">
+                <ul className="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageOneLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-search-location"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Advertising and filling vacancies
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageTwoLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-home"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Tenant screening (credit, criminal background)
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageThreeLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-house-damage"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Leases administration
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageFourLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-chart-line"></i>
+                          </div>
+                          <div
+                            className="realty__services-option-itemTitle"
+                            id="services-option-itemTitle-long"
+                          >
+                            <p>
+                            Move-in inspection walkthrough
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageFiveLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-tasks"></i>
+                          </div>
+                          <div
+                            className="realty__services-option-itemTitle"
+                            id="services-option-itemTitle-long"
+                          >
+                            <p>
+                            Rent payment
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageSixLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-balance-scale"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Repairs & maintenance
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageSevenLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-balance-scale"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Vendor management
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageEightLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-balance-scale"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Evictions proceedings
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageNineLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-balance-scale"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Possession of leased premises
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="realty_services-option--boxContainer">
+                      <div className="realty__services-option--innerBox">
+                        <div className="realty_services-option--imageContainer realty__services-option--imageTenLeft"></div>
+                        <div className="realty_services-option--content">
+                          <div className="realty__services-option-icon">
+                            <i class="fas fa-balance-scale"></i>
+                          </div>
+                          <div className="realty__services-option-itemTitle">
+                            <p>
+                            Financial reporting
+
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                    <div className="realty_services-option-decoration"></div> 
+                  </Row>
+                <Row className="row-bar">
+                  <div className="slide-bar" />
+                </Row>  
+                  
+              </Container>
                 <div className="realty_services-option-decoration"></div>
-              </div>
-            </div>
           </div>
           
           </main>
           
-          <Contact />
+          <div id="contact_page">
+            <Contact />
+          </div>
         </div>
     </>
   )

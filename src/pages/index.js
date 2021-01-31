@@ -15,6 +15,10 @@ import Contact from "../pages/Contact"
 import Career from "../pages/Career"
 import RiskManagement from "../pages/RiskManagement"
 import RealEstate from "../pages/RealEstate"
+import FarmPslide from "../components/FarmPslide"
+
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
 // import Slick from "../components/Slick"
 
 
@@ -22,7 +26,14 @@ import RealEstate from "../pages/RealEstate"
 
 const IndexPage = () => {
 
-
+  const options = {
+    // you can also just use 'bottom center'
+    position: positions.MIDDLE,
+    timeout: 5000,
+    offset: '30px',
+    // you can also just use 'scale'
+    transition: transitions.SCALE
+  }
 
 
 
@@ -64,6 +75,9 @@ const IndexPage = () => {
       document.body.appendChild(script)
     }
 
+    
+
+   
 
     addCSS("https://locataire.imfast.io/engine1/style.css")
     addJquery("https://locataire.imfast.io/engine1/jquery.js")
@@ -78,6 +92,7 @@ const IndexPage = () => {
   return (
     
        <>
+        <AlertProvider template={AlertTemplate} {...options}>
         <Helmet>
           <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
           
@@ -94,6 +109,8 @@ const IndexPage = () => {
           </Switch>
         </Router> */}
       <RealEstate />
+      {/* <Farm /> */}
+      </AlertProvider>
     </>
    
   )

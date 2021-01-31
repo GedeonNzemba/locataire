@@ -739,6 +739,7 @@ html::-webkit-scrollbar {
             flex-direction: column;
             position: relative;
             max-width: 100%;
+            width: 100%;
 
             & div.realty__innerWrap {
                 display: flex;
@@ -765,8 +766,8 @@ html::-webkit-scrollbar {
                         position: absolute;
                         right: 0;
                         top: 78px;
-                        width: 100px;
-                        height: 149px;
+                        width: 13.4rem;
+                        height: 20rem;
                             
 
                         &#realty__image-svgOne-two {
@@ -774,8 +775,8 @@ html::-webkit-scrollbar {
                             right: unset;
 
                             @include for-tablet-landscape-only {
-                                width: 100px;
-                                height: 149px;
+                                width: 13.4rem;
+                                height: 20rem;
                             }
                         }
 
@@ -797,8 +798,24 @@ html::-webkit-scrollbar {
                         /* width: 135px; */
                         align-self: flex-end;
                         position: absolute;
-                        left: 400px;
+                        left: 40%;
                         bottom: 0;
+
+                        @include for-small-desktop-only {
+                            bottom: -8rem;
+                        }
+
+                        @include for-medium-desktop-only {
+                            bottom: -8rem;
+                        }
+
+                        @include for-big-desktop-only {
+                            bottom: -8rem;
+                        }
+
+                        @include for-big-desktop-up {
+                            bottom: -8rem;
+                        }
 
                         @include for-tablet-landscape-only {
                             display: none;
@@ -849,7 +866,7 @@ html::-webkit-scrollbar {
                             color: $dark;
                             font-family: "Ginto regular";
                             font-weight: normal;
-                            font-size: $large-body-copy;
+                            font-size: 2.1rem;
                             text-align: left;
                             letter-spacing: 0.45px;
                             //   width: 60%;
@@ -1082,13 +1099,15 @@ main.investment_service {
 @media (min-width: 900px) {
   .realEstate article.realty__article div.realty__article-content div.realty__innerWrap div.realty__image .realty__image-svgOne {
     right: 1rem;
-    width: 12.5rem;
-    height: 25rem;
+    width: 13.4rem;
+    height: 20rem;
   }
   .realEstate article.realty__article div.realty__article-content div.realty__innerWrap div.realty__image .realty__image-svgOne#realty__image-svgOne-two {
-    left: 5rem;
-    width: 12.5rem;
-    height: 25rem;
+    left: 2rem;
+    // width: 12.5rem;
+    // height: 25rem;
+    width: 13.4rem;
+    height: 20rem;
   }
   }
 

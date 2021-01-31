@@ -74,7 +74,7 @@ export default function Realtymobile() {
 
   return (
     <>
-        <div className="realEstate-midD reset-this">
+        <div className="realEstate-midD reset-this onlyBtn">
           
           {/* TOP HEADER */}
           <header className="realEstate_header" >
@@ -793,7 +793,9 @@ export default function Realtymobile() {
               </div> */}
             </section>
 
-            <Contact />
+            <div id="contact_page-mb">
+              <Contact />
+            </div>
 
           </main>
         </div>

@@ -2271,6 +2271,10 @@
   position: relative;
   overflow: hidden;
 }
+#production-card-anim.hvr-overline-from-center:before {
+  height: 5px!important;
+  z-index: 0!important;
+}
 .hvr-overline-from-center:before {
   content: "";
   position: absolute;
@@ -2278,7 +2282,7 @@
   left: 51%;
   right: 51%;
   top: 0;
-  background: #313962;
+  background: hsl(120, 100%, 25%);
   height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;

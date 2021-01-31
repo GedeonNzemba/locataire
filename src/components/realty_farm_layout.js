@@ -1,13 +1,43 @@
-import React from "react"
+import React, { useState } from "react"
 import "../styles/Locataire.css"
 
 import ButtonFour from "./buttonFour"
 import ButtonThree from "./ButtonThree"
 import ButtonFive from "./buttonFive"
+import FarmPslide from "./FarmPslide"
+import MainContent_farm from "./MainContent_farm"
+import {Container, Col, Row, Header} from "react-bootstrap"
+import Food_map from "./Food_map"
+import Livestock_map from "./Livestock_map"
+import Nutrition_map from "./Nutrition_map"
+import Product_nav from './data/Product_nav'
 
 export default function RealtyFarmLayout() {
+  
+  const profession = ["All", "Food", "Livestock", "Nutrition"];
+  const [myProfession, setMyProfession] = useState(<MainContent_farm />);
+
+  // if (myProfession === "All") {
+  //   const title = document.getElementById('title');
+  //   title.innerHTML('All');
+  // }
+
+  // const titlelists = Product_nav.map((item) => 
+
+  //     <div class="button-group"  key={item.id}>
+  //       <button class="button" onClick={() => setMyProfession(profession)}>
+  //         {item.title}
+  //       </button>
+  //     </div>
+
+
+  
+  // )
+
   return (
     <React.Fragment>
+      <iframe frameborder="0"  style={{width: '100%', height: '434vh', border: 'none'}} src="http://locatairefarm.online/" ></iframe>
+      {/* <FarmPslide /> */}
       <div className="realty__farm">
         <header className="realty__farm-header">
           <nav className="realty__farm-navbar">
@@ -84,504 +114,118 @@ export default function RealtyFarmLayout() {
         <br />
         <br />
 
-        <div className="realty__farm-aboutUs">
-          <section className="realty__farm-aboutUs-top_content">
-            <div className="realty__farm-aboutUs-top_content_Leftwrap">
-              <span>know about us</span>
-              <h2>livestock production</h2>
-            </div>
+          <>
+              <FarmPslide />
+          </>
 
-            <div className="realty__farm-aboutUs-top_content_Rightwrap">
-              <div className="realty__farm-aboutUs-top_content_divider"></div>
-              <div className="realty__farm-aboutUs-top_content_text">
-                From our farm to the table, our team supplies raw and
-                <br />
-                processed agricultural commodities and specialized <br />
-                food ingredients to a wide range of customers in the <br />
-                livestock, poultry, food processor, food services and <br />
-                bakery industries.
-              </div>
-            </div>
-          </section>
-
-          <section className="realty__farm-aboutUs-bottom_content">
-            <div className="realty__farm-aboutUs-bottom_content_leftImage">
-              <div className="realty__farm-aboutUs-bottom_content_leftImage_image"></div>
-            </div>
-            <div className="realty__farm-aboutUs-bottom_content_rightContainer">
-              <div className="realty__farm-aboutUs-bottom_content_rightslider">
-                <div className="realty__farm-slideOne realty__farm-slide">
-                  <div className="realty__farm-slideOne_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideOne_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-certificate"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Poultry Production</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        We raised various poultry species including <br />
-                        crossbred chickens, turkeys, ducks, <br />
-                        guinea fowl, and geese
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="realty__farm-slide_divider" />
-
-                <div className="realty__farm-slideOne realty__farm-slide">
-                  <div className="realty__farm-slideOne_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideOne_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-certificate"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Poultry Production</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        We raised various poultry species including <br />
-                        crossbred chickens, turkeys, ducks, <br />
-                        guinea fowl, and geese
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="realty__farm-slide_divider" />
-
-                <div className="realty__farm-slideTwo realty__farm-slide">
-                  <div className="realty__farm-slideTwo_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideTwo_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-heartbeat"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Healthy Journey</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        Our animals are raised outdoors on pasture <br />
-                        where they enjoy a comfort that allows
-                        <br />
-                        them to express their natural behaviors.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="realty__farm-slide_divider" />
-
-                <div className="realty__farm-slideTwo realty__farm-slide">
-                  <div className="realty__farm-slideTwo_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideTwo_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-heartbeat"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Healthy Journey</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        Our animals are raised outdoors on pasture <br />
-                        where they enjoy a comfort that allows
-                        <br />
-                        them to express their natural behaviors.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="realty__farm-slide_divider" />
-
-                <div className="realty__farm-slideOne realty__farm-slide">
-                  <div className="realty__farm-slideOne_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideOne_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-certificate"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Poultry Production</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        We raised various poultry species including <br />
-                        crossbred chickens, turkeys, ducks, <br />
-                        guinea fowl, and geese
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="realty__farm-aboutUs-bottom_content_rightBottom_info">
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_title">
-                  We offer alternative farming system with regard to biosecurity
-                </div>
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_subject">
-                <p>based on free range production of poultry, table eggs, pig,
-                  and goat. We produce organic products of superior <br /> quality in
-                  accordance with food safety management standards such as the
-                  International Standard ISO 22000.
-                  </p>
-                </div>
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_options">
-                  <ul className="realty__farm-aboutUs-bottom_content_rightBottom_info_optionWrap">
-                    <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-dna"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            birds are bred for meat or egg production and
-                            require intensive nutritional and health management
-                            to express their genetic potential.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                   <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-drumstick-bite"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            Turkeys are generally raised for meat, not for any
-                            eggs they might provide.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                     <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-feather-alt"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            Ducks however are raised for meat, feathers and for
-                            their eggs.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
 
         <br />
         <br />
         <br />
 
-        <div className="realty__farm-aboutUs">
-          <section className="realty__farm-aboutUs-top_content">
-            <div className="realty__farm-aboutUs-top_content_Leftwrap">
-              <span>know about us</span>
-              <h2>livestock production</h2>
-            </div>
-
-            <div className="realty__farm-aboutUs-top_content_Rightwrap">
-              <div className="realty__farm-aboutUs-top_content_divider"></div>
-              <div className="realty__farm-aboutUs-top_content_text">
-                From our farm to the table, our team supplies raw and
-                <br />
-                processed agricultural commodities and specialized <br />
-                food ingredients to a wide range of customers in the <br />
-                livestock, poultry, food processor, food services and <br />
-                bakery industries.
-              </div>
-            </div>
-          </section>
-
-          <section className="realty__farm-aboutUs-bottom_content">
-            <div className="realty__farm-aboutUs-bottom_content_leftImage">
-              <div className="realty__farm-aboutUs-bottom_content_leftImage_image-2"></div>
-            </div>
-            <div className="realty__farm-aboutUs-bottom_content_rightContainer">
-              <div className="realty__farm-aboutUs-bottom_content_rightslider">
-                <div className="realty__farm-slideOne realty__farm-slide">
-                  <div className="realty__farm-slideThree_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideOne_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-certificate"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Veterinarian Support</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        We provide them excellent feed and <br />
-                        housing and monitor their health <br />
-                        constantly 
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="realty__farm-slide_divider" />
-
-                <div className="realty__farm-slideTwo realty__farm-slide">
-                  <div className="realty__farm-slideFour_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideTwo_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-heartbeat"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Animal Care</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                          Our well-trained staff work with the animals <br />
-                          taking care of them on a daily basis. From <br />
-                          attention to hygiene, feeding and preventive<br />
-                          measures to reduce to a minimum injury or <br />
-                          any type of stress.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        <Container fluid className="realty__farm-Product">
+          {/* <div id="circle-svg-right_one" />
+          <div id="circle-svg-right_two" /> */}
+          <Col id="farm_product-container">
+            {/* <Row className="farm-product_row">
+              <Header title="Show and hide elements" />
+              <div className="btn-group" role="group" aria-label="Basic example">
+                {profession.map(profession => (
+                  <button 
+                    type="button"
+                    key={profession}
+                    className={"btn btn-light border-dark"}
+                    onClick={() => setMyProfession(profession)}
+                  >
+                    {profession.toLocaleUpperCase}
+                  </button>
+                ))}
               </div>
 
-              <div className="realty__farm-aboutUs-bottom_content_rightBottom_info">
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_title">
-                  We offer alternative farming system with regard to biosecurity
-                </div>
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_subject">
-                  <p>based on free range production of poultry, table eggs, pig,
-                  and goat. We produce organic products of superior <br /> quality in
-                  accordance with food safety management standards such as the
-                  International Standard ISO 22000.
-                  </p>
-                </div>
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_options">
-                  <ul className="realty__farm-aboutUs-bottom_content_rightBottom_info_optionWrap">
-                    <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-dna"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            birds are bred for meat or egg production and
-                            require intensive nutritional and health management
-                            to express their genetic potential.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                   <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-drumstick-bite"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            Turkeys are generally raised for meat, not for any
-                            eggs they might provide.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                     <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-feather-alt"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            Ducks however are raised for meat, feathers and for
-                            their eggs.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <br />
-        <br />
-        <br />
-
-        <div className="realty__farm-aboutUs">
-          <section className="realty__farm-aboutUs-top_content">
-            <div className="realty__farm-aboutUs-top_content_Leftwrap">
-              <span>know about us</span>
-              <h2>livestock production</h2>
-            </div>
-
-            <div className="realty__farm-aboutUs-top_content_Rightwrap">
-              <div className="realty__farm-aboutUs-top_content_divider"></div>
-              <div className="realty__farm-aboutUs-top_content_text">
-                From our farm to the table, our team supplies raw and
-                <br />
-                processed agricultural commodities and specialized <br />
-                food ingredients to a wide range of customers in the <br />
-                livestock, poultry, food processor, food services and <br />
-                bakery industries.
-              </div>
-            </div>
-          </section>
-
-          <section className="realty__farm-aboutUs-bottom_content">
-            <div className="realty__farm-aboutUs-bottom_content_leftImage">
-              <div className="realty__farm-aboutUs-bottom_content_leftImage_image-3"></div>
-            </div>
-            <div className="realty__farm-aboutUs-bottom_content_rightContainer">
-              <div className="realty__farm-aboutUs-bottom_content_rightslider">
-                <div className="realty__farm-slideOne realty__farm-slide">
-                  <div className="realty__farm-slideFive_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideOne_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-certificate"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Meat Production</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        Raised without antibiotics or growth <br />
-                        enhancers, animals’ nutrition includes <br />
-                        cereals and flaxseed, giving the meat an <br />
-                        incomparable flavor and mellowness
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="realty__farm-slide_divider" />
-
-                <div className="realty__farm-slideTwo realty__farm-slide">
-                  <div className="realty__farm-slideSix_image realty__farm-slide_image"></div>
-                  <div className="realty__farm-slideTwo_content">
-                    <div className="realty__farm-slider_title">
-                      <div className="realty__farm-slider_dot">
-                        <i class="fas fa-heartbeat"></i>
-                      </div>
-                      <div className="realty__farm-slider_text">
-                        <span>Veterinarian Support</span>
-                      </div>
-                    </div>
-                    <div className="realty__farm-slider_paragraph">
-                      <p>
-                        We also have the support of a veterinarian <br />
-                        who performs weekly check of our animals <br />
-                        and provides advise for their care
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="col text-center">
+                <p>{myProfession}</p>
+                <p>
+                  {myProfession === "police" && <h3>This is Police</h3>}
+                </p>
               </div>
 
-              <div className="realty__farm-aboutUs-bottom_content_rightBottom_info">
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_title">
-                  We offer alternative farming system with regard to biosecurity
-                </div>
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_subject">
-                  <p>based on free range production of poultry, table eggs, pig,
-                  and goat. We produce organic products of superior <br /> quality in
-                  accordance with food safety management standards such as the
-                  International Standard ISO 22000.
-                  </p>
-                </div>
-                <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_options">
-                  <ul className="realty__farm-aboutUs-bottom_content_rightBottom_info_optionWrap">
-                    <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-dna"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            birds are bred for meat or egg production and
-                            require intensive nutritional and health management
-                            to express their genetic potential.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                   <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-drumstick-bite"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            Turkeys are generally raised for meat, not for any
-                            eggs they might provide.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                     <li>
-                      <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option">
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_leftSvg">
-                          <i class="fas fa-feather-alt"></i>
-                        </div>
-                        <div className="realty__farm-aboutUs-bottom_content_rightBottom_info_option_paragraph">
-                          <p>
-                            Ducks however are raised for meat, feathers and for
-                            their eggs.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+            </Row> */}
 
-        <br />
-        <br />
-        <br />
 
-        <div className="realty__farm-Product">
-          <div id="circle-svg-right_one" />
-          <div id="circle-svg-right_two" />
-          <header className="realty__farm-Product_header">
-            <div className="realty__farm-Product_header-title">
-              <h2>our products</h2>
-            </div>
-            <div className="realty__farm-Product_header-searchFilter">
-              <div className="realty__farm-Product_header-searchFilter_option"><span>all</span></div>
-              <div className="realty__farm-Product_header-searchFilter_option"><span>animals</span></div>
-              <div className="realty__farm-Product_header-searchFilter_option"><span>eggs</span></div>
-              <div className="realty__farm-Product_header-searchFilter_option"><span>meat</span></div>
-              <div className="realty__farm-Product_header-searchFilter_option"><span>livestock</span></div>
-              <div className="realty__farm-Product_header-searchFilter_option"><span>nutrition</span></div>
-            </div>
-          </header>
 
-          <div className="realty__farm-Product_productContainerWrap">
+            <Row className="farm-product_row">
+              <header className="realty__farm-Product_header">
+                <div className="realty__farm-Product_header-title">
+                  <h2>our products</h2>
+                </div>
+                
+                {/* <div className="btn-group" role="group" aria-label="Basic example">
+                {profession.map(profession => (
+                  <button 
+                    type="button"
+                    key={profession}
+                    className={"btn btn-light border-dark"}
+                    onClick={() => setMyProfession(profession)}
+                  >
+                    {profession.toLocaleUpperCase}
+                  </button>
+                ))}
+              </div> */}
+              
+
+              <br />
+
+                  {console.log(Product_nav)};
+                  <Container>
+                <Row>
+                <div class="button-group">
+                {profession.map(profession => (
+                  <button class="button" onClick={() => setMyProfession(profession)} key={profession}>
+                    {profession.toLocaleUpperCase}
+                    {profession}
+                  </button>
+                ))}
+
+                  {/* <button class="button button--primary">
+                    Primary
+                  </button>
+
+                  <button class="button button--warn">
+                    Warn
+                  </button>
+                  <button class="button button--secondary">
+                    Secondary
+                  </button> */}
+                </div>
+                </Row>
+              </Container>
+              
+              </header>
+            </Row>
+          
+
+          {/* MAIN BOX ITEM */}
+          <Row className="farm-product_row">
+              <>
+              
+
+              <div className="col text-center">
+                <p style={{color: '#ffffff'}}>{myProfession}</p>
+                <p style={{color: '#ffffff'}}>
+                  {myProfession === "All" && <Row className="farm-product_row"><MainContent_farm /></Row>}
+                  {myProfession === "Food" && <Row className="farm-product_row"><Food_map /></Row>}
+                  {myProfession === "Livestock" && <Row className="farm-product_row"><Livestock_map /></Row>}
+                  {myProfession === "Nutrition" && <Row className="farm-product_row"><Nutrition_map /></Row>}
+                </p>
+                </div>
+              </>
+          </Row>
+          {/* MAIN BOX ITEN ENDS */}
+
+          
+          {/* <iframe frameborder="0" scrolling="no" style="height:800px;width:100%;border:none;" src='http://locatairefarm.online/'></iframe> */}
+
+          {/* <div className="realty__farm-Product_productContainerWrap">
             <div className="realty__farm-Product_productContainer">
             <div className="realty__farm-Product_product-box realty__farm-Product_box-1">
               <div className="realty__farm-Product_product-box_imageContainer">
@@ -698,25 +342,12 @@ export default function RealtyFarmLayout() {
           <br />
          
 
-          {/* <div className="realty__farm-product-contactWrap">
-            <div className="realty__farm-product-contact_image" />
-            <div className="realty__farm-product-contact_content">
-              <h1>
-                Contact Us
-              </h1>
-              <p>
-                For questions, more information or to place an order, <br />
-                call or email us at info@locataire.net. We will review <br />
-                your needs and discuss availability and delivery <br />
-                options.
-              </p>
-            </div>
-          </div> */}
+          
 
           
 
           <div className="realty__farm-product__svgCircle-a" />
-          </div>
+          </div> */}
           <div className="realty__farm-product-contactWrap">
             <div className="realty__farm-product-contact_image" />
             <div className="realty__farm-product-contact_content">
@@ -1021,8 +652,8 @@ export default function RealtyFarmLayout() {
 
            
           </div>
-         
-        </div>
+          </Col>
+        </Container>
       </div>
     </React.Fragment>
   )

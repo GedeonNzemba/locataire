@@ -64,7 +64,7 @@ html::-webkit-scrollbar {
     & .realty__image-svgThree {
       display: flex;
           flex-direction: row;
-          z-index: 999;
+          // z-index: 999;
           justify-content: flex-end;
           // border: 2px solid;
           /* width: 135px; */
@@ -86,6 +86,7 @@ html::-webkit-scrollbar {
     & div.realty__headerContainer {
       display: flex;
       flex-direction: column;
+      z-index: 999;
       // justify-content: space-between;
       text-align: center;
       // border: 1px solid palegreen;
@@ -96,7 +97,7 @@ html::-webkit-scrollbar {
 
       & div.realty__smallTitle {
         color: $blue;
-        font-size: $large-body-copy;
+        font-size: 2.5rem;
         font-family: "Ginto bold";
         font-weight: bold;
         font-style: normal;
@@ -116,11 +117,12 @@ html::-webkit-scrollbar {
 
       & div.realty__bigTitle {
         color: $bluethick;
-        font-size: $main-heading-copy;
+        font-size: 4.6rem;
         font-family: "GT Super Ds Trial Bd";
         font-weight: bold;
         font-style: normal;
         text-align: center;
+        padding-left: 10rem;
 
         @include for-tablet-landscape-only {
           font-size: 5rem;
@@ -328,6 +330,10 @@ html::-webkit-scrollbar {
 
 // REALTY SERVICES
 .realty_services {
+  
+  @include for-big-desktop-up {
+    margin-top: 25rem;
+}
   @include for-tablet-landscape-only {
     display: none;
   }
@@ -340,12 +346,13 @@ html::-webkit-scrollbar {
   // margin-top: 8%;
 
 
+
   & .realty_services-svg {
     background-image: url("../images/REALTY/Group10.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    right: 3%;
+    // right: 3%;
     z-index: 999;
     width: 266px;
     height: 629px;
@@ -385,7 +392,7 @@ html::-webkit-scrollbar {
     top: 16.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 48.125rem;
+    // height: 48.125rem;
     width: 90%;
     background-color: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -423,7 +430,7 @@ html::-webkit-scrollbar {
         font-weight: bold;
         text-align: left;
         letter-spacing: 0.45px;
-        font-size: $xsub-heading-copy;
+        // font-size: $xsub-heading-copy;
         text-transform: uppercase;
         margin-block-start: 0;
       }
@@ -450,8 +457,8 @@ html::-webkit-scrollbar {
         background-image: url("../images/REALTY/canada_USA.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        width: 595px;
-        height: 100px;
+        // width: 595px;
+        // height: 100px;
         margin-block-start: 0.83em;
         border-radius: 72px 72px 0px 0px;
       }
@@ -557,7 +564,7 @@ html::-webkit-scrollbar {
         z-index: 9999;
         bottom: 20%;
         // padding-inline-start: 0!important;
-        max-width: 62vw;
+        // max-width: 62vw;
         overflow-x: scroll;
         padding: 40px 0px 35px 40px;
         scroll-behavior: smooth;
@@ -575,27 +582,27 @@ html::-webkit-scrollbar {
           display: block;
           list-style-type: none;
           float: left;
-          margin-right: 2.5rem;
+          // margin-right: 2.5rem;
         }
-        & li:last-child {
-          padding-right: 40px;
-        }
+        // & li:last-child {
+        //   padding-right: 40px;
+        // }
       }
     }
 
     & div.realty_services-option-decoration {
-      width: 94vw;
-      height: 250px;
-      background-color: #eff3ff;
+      // width: 94vw;
+      // height: 250px;
+      // background-color: #eff3ff;
       position: relative;
-      border-radius: 70px;
+      // border-radius: 70px;
       z-index: 9;
     }
 
     & div.realty_services-option--boxContainer {
       background: #ffffff;
-      width: 250px;
-      height: 350px;
+      // width: 250px;
+      // height: 350px;
       border-radius: 8%;
       /* clip-path: ellipse(69% 76% at 34% 70%); */
       /* border-radius: 8% 60% 0% 0%; */
@@ -606,17 +613,17 @@ html::-webkit-scrollbar {
       & div.realty__services-option--innerBox {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        width: 250px;
-        height: 350px;
-        padding: 20px;
+        // justify-content: flex-start;
+        // width: 250px;
+        // height: 350px;
+        // padding: 20px;
 
         & div.realty_services-option--imageContainer {
-          width: 210px;
-          height: 200px;
+          // width: 210px;
+          // height: 200px;
           border-radius: 8%;
           background: aliceblue;
-          margin-bottom: 1rem;
+          // margin-bottom: 1rem;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
@@ -680,10 +687,10 @@ html::-webkit-scrollbar {
           width: 210px;
           border-right: 2px solid #313962;
           border-bottom: 2px solid #313962;
-          border-block-start-color: red;
+          // border-block-start-color: red;
           border-width: medium;
           height: 103px;
-          padding-right: 10px;
+          // padding-right: 10px;
 
           & div.realty__services-option-icon {
             margin-right: 2rem;
@@ -694,7 +701,7 @@ html::-webkit-scrollbar {
             font-weight: bold;
             text-align: center;
             font-size: $xsmall-body-copy;
-            text-transform: uppercase;
+            text-transform: capitalize;
             margin-bottom: 1rem;
             display: flex;
             justify-content: center;
@@ -702,7 +709,7 @@ html::-webkit-scrollbar {
 
             &#services-option-itemTitle-long {
               overflow: scroll;
-              height: 84px;
+              height: 10rem;
             }
             &#services-option-itemTitle-long::-webkit-scrollbar {
               display: none;
@@ -714,13 +721,16 @@ html::-webkit-scrollbar {
   }
 }
 
+
+
+
 .realty_services--tablet {
   @include for-tablet-landscape-only {
     display: none;
   }
   display: flex;
   flex-direction: column;
-  height: 1189px;
+  height: 118.9rem;
   padding: 0 3% 0 3%;
   position: relative;
   justify-content: flex-start;
@@ -732,7 +742,7 @@ html::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    right: 3%;
+    // right: 3%;
     z-index: 999;
     width: 266px;
     height: 629px;
@@ -772,7 +782,7 @@ html::-webkit-scrollbar {
     top: 16.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 48.125rem;
+    // height: 48.125rem;
     width: 90%;
     background-color: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -810,7 +820,7 @@ html::-webkit-scrollbar {
         font-weight: bold;
         text-align: left;
         letter-spacing: 0.45px;
-        font-size: $xsub-heading-copy;
+        // font-size: $xsub-heading-copy;
         text-transform: uppercase;
         margin-block-start: 0;
       }
@@ -837,8 +847,8 @@ html::-webkit-scrollbar {
         background-image: url("../images/REALTY/canada_USA.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        width: 595px;
-        height: 100px;
+        // width: 595px;
+        // height: 100px;
         margin-block-start: 0.83em;
         border-radius: 72px 72px 0px 0px;
       }
@@ -944,7 +954,7 @@ html::-webkit-scrollbar {
         z-index: 9999;
         bottom: 20%;
         // padding-inline-start: 0!important;
-        max-width: 62vw;
+        // max-width: 62vw;
         overflow-x: scroll;
         padding: 40px 0px 35px 40px;
         scroll-behavior: smooth;
@@ -962,27 +972,27 @@ html::-webkit-scrollbar {
           display: block;
           list-style-type: none;
           float: left;
-          margin-right: 2.5rem;
+          // margin-right: 2.5rem;
         }
-        & li:last-child {
-          padding-right: 40px;
-        }
+        // & li:last-child {
+        //   padding-right: 40px;
+        // }
       }
     }
 
     & div.realty_services-option-decoration {
-      width: 94vw;
-      height: 250px;
-      background-color: #eff3ff;
+      // width: 94vw;
+      // height: 250px;
+      // background-color: #eff3ff;
       position: relative;
-      border-radius: 70px;
+      // border-radius: 70px;
       z-index: 9;
     }
 
     & div.realty_services-option--boxContainer {
       background: #ffffff;
-      width: 250px;
-      height: 350px;
+      // width: 250px;
+      // height: 350px;
       border-radius: 8%;
       /* clip-path: ellipse(69% 76% at 34% 70%); */
       /* border-radius: 8% 60% 0% 0%; */
@@ -993,17 +1003,16 @@ html::-webkit-scrollbar {
       & div.realty__services-option--innerBox {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        width: 250px;
-        height: 350px;
-        padding: 20px;
+        // justify-content: flex-start;
+        // width: 250px;
+        // height: 350px;
+        // padding: 20px;
 
         & div.realty_services-option--imageContainer {
-          width: 210px;
-          height: 200px;
+        
           border-radius: 8%;
           background: aliceblue;
-          margin-bottom: 1rem;
+          // margin-bottom: 1rem;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
@@ -1067,10 +1076,10 @@ html::-webkit-scrollbar {
           width: 210px;
           border-right: 2px solid #313962;
           border-bottom: 2px solid #313962;
-          border-block-start-color: red;
+          // border-block-start-color: red;
           border-width: medium;
           height: 103px;
-          padding-right: 10px;
+          // padding-right: 10px;
 
           & div.realty__services-option-icon {
             margin-right: 2rem;
@@ -1081,7 +1090,7 @@ html::-webkit-scrollbar {
             font-weight: bold;
             text-align: center;
             font-size: $xsmall-body-copy;
-            text-transform: uppercase;
+            text-transform: capitalize;
             margin-bottom: 1rem;
             display: flex;
             justify-content: center;
@@ -1089,7 +1098,7 @@ html::-webkit-scrollbar {
 
             &#services-option-itemTitle-long {
               overflow: scroll;
-              height: 84px;
+              height: 10rem;
             }
             &#services-option-itemTitle-long::-webkit-scrollbar {
               display: none;
@@ -1638,15 +1647,65 @@ html::-webkit-scrollbar {
   }
 
   & .realty__farm-Product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-items: center;
+    border: 5px solid red;
+    // display: grid;
+    // grid-template-columns: auto;
+    // grid-template-rows: auto;
+    // justify-items: center;
     /* align-items: center; */
-    align-items: start;
+    // align-items: start;
     position: relative;
     overflow: hidden;
+
+    & #farm_product-container {
+      border: 5px solid green;
+      background-color: #011!important;
+    }
+
+    & .farm-product_row {
+      justify-content:center;
+    }
+
+    & .card {
+      height: fit-content;
+      background-color: transparent!important;
+
+      &:hover {
+        background-color: #2b3039!important;
+      }
+    }
+
+    & .card_img {
+      display: flex;
+      justify-content: center;
+
+      & img {
+        width: 16rem!important;
+        height: 16rem;
+      }
+    }
+
+    & #card_header-content {
+      text-align: center;
+
+      & .btn:hover {
+        background-color: #28a745;
+
+        & span {
+          border: unset
+        }
+      }
+    }
+
+    & #card_header-content {
+      & span {
+        border: unset;
+      }
+    }
 
     & #circle-svg-right_one {
       position: absolute;
@@ -1681,7 +1740,7 @@ html::-webkit-scrollbar {
         text-align: center;
 
         & h2 {
-          color: $dark;
+          color: $white;
           font-family: "GT Super Ds Trial Bd";
           font-weight: bold;
           font-size: $xsub-heading-copy;
@@ -1713,12 +1772,12 @@ html::-webkit-scrollbar {
           }
 
           & span {
-            color: $dark;
+            color: $white;
             font-family: "Ginto bold";
             font-weight: bold;
             font-size: $xsmall-body-copy;
             float: left;
-            text-transform: uppercase;
+            text-transform: capitalize;
             line-height: 1.2;
           }
         }
@@ -3035,4 +3094,29 @@ html::-webkit-scrollbar {
     -moz-box-shadow: 0 0 0 0 rgba(70, 118, 250, 0);
     box-shadow: 0 0 0 0 rgba(70, 118, 250, 0);
   }
+}
+
+p.front {
+  font-size: 1.5rem!important;
+}
+.slide__header {
+  font-size: 2rem!important;
+}
+
+#contact--frame {
+  border: 5px solid white;
+    border-radius: 15px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.ViewMap__MadeWith-sc-1nid2o5-5 .edSHQc {
+  display: none!important;
+}
+.ViewMap__MadeWith-sc-1nid2o5-5  {
+  display: none!important;
+}
+.edSHQc {
+  display: none!important;
+}
+a.ViewMap__MadeWith-sc-1nid2o5-5.edSHQc {
+  display: none!important;
 }
