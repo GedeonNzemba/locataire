@@ -1,0 +1,182 @@
+#risk-bg {
+    background-image: url("../images/AUDIT\ &\ RISK\ MANAGEMENT/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 80vh;
+}
+#locataire__risk-management {
+    height: 300vh;
+}
+div.wraper-header_content-risk {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    position: relative;
+    float: left;
+    height: auto;
+
+    & .risk-management__leftWrap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 8%;
+        height: 800px;
+        border: 1px solid red;
+        width: 50%;
+
+        & .risk-management__header-content {
+            display: flex;
+            flex-direction: column;
+            padding-left: 6rem;
+            height: 30rem;
+            border: 2px solid greenyellow;
+
+            & .rs-subtitle {
+                display: block;
+                width: fit-content;
+
+                & h3 {
+                    line-height: 1.2;
+                    text-rendering: optimizeLegibility;
+                    text-transform: uppercase;
+                    font-family: "Ginto bold";
+                    font-weight: bold;
+                    color: $rs-subtitle;
+                    font-size: 3.5rem;
+                    margin-block-end: 0;
+                    z-index: 999;
+                }
+
+                & #risk-management__Textline {
+                    background-color: $rs-line;
+                    height: .5rem;
+
+                    border: none;
+                    margin-block-start: 0;
+                    margin-inline-start: 0;
+                    transform: translateY(-10px);
+                    z-index: 9;
+                }
+            }
+
+            & h1 {
+                text-align: left;
+                font-family: "GT Super Ds Trial Bd";
+                font-size: 4.7rem;
+                font-weight: bold;
+                text-rendering: optimizeLegibility;
+                text-transform: uppercase;
+                color: $white;
+            }
+
+            & .risk-management__HeaderButton {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                width: fit-content;
+
+                & #rs-line {
+                    margin: 0 3rem;
+                }
+            }
+        }
+
+        & .risk-management__header-rs_img {
+            // margin-left: 10%;
+            width: 120%;
+            padding: 8% 10% 0 10%;
+            border-radius: 25% 25% 0% 0%;
+            border: 10px solid #314862;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            position: absolute;
+            bottom: -6rem;
+            background-color: $white;
+
+            & .risk-management__header-rs_image {
+                background-image: url("../images/farm/RISK-MANAG.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 40rem;
+                height: 40rem;
+                border-radius: 20%;
+            }
+        }
+    }
+}
+
+div.header_content-inner-rightTop {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    z-index: 9;
+    position: relative;
+    height: 90vh;
+
+    & section#risk-management__RightTopcontainer {
+        // height: 72vh;
+        position: relative;
+        width: 100%;
+
+        & .risk-management__header-brief {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            padding: 2% 8% 5% 12%;
+            -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+            /* transform: translateY(0px); */
+            background: $white;
+            height: fit-content;
+            position: absolute;
+            bottom: 15rem;
+            right: 0;
+  
+            & h2 {
+              color: $dark;
+              font-size: $sub-heading-copy;
+              font-family: "GT Super Ds Trial Bd";
+              font-weight: bold;
+              text-align: left;
+              text-transform: uppercase;
+              line-height: 1.2;
+              margin-block-end: 0;
+            }
+  
+            & p {
+              color: $dark;
+              font-size: $body-copy;
+              font-family: "Ginto regular";
+              font-weight: normal;
+              text-align: left;
+              line-height: 1.2;
+            }
+          }
+       
+    }
+
+   & div.risk-management__rightContent {
+        display: flex;
+        flex-direction: row;
+        /* height: 330px; */
+        z-index: 999;
+        position: absolute;
+        bottom: 3.5%;
+        left: -15%;
+        clip-path: polygon(10% 0%, 200% 0%, 100% 100%, 0% 100%);
+    
+        & .risk-management__right_image {
+            background-image: url("../images/farm/risk_banner.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 74rem;
+            height: 15rem;
+          }
+    }
+}
+
+.risk-management__HeaderButton {
+    margin-top: 2.5rem;
+}

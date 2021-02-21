@@ -10,7 +10,7 @@ const ButtonSix = (props) => {
     //     <button className="getStarted-btn " type="button" id="buttonSix">Get Started</button>
     // </a>
     <div className="button">
-      <a href="www.google.com" className="btn btn--green">{props.name}</a>
+      <a href="www.google.com" className="btn btn--green" id="header-risk-btn-left">{props.name}</a>
     </div>
   )
 }

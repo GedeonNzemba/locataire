@@ -93,7 +93,7 @@ const IndexPage = () => {
             <Route path="/riskmanagement" component={RiskManagement} />
           </Switch>
         </Router> */}
-      <RealEstate />
+      <RiskManagement />
     </>
    
   )

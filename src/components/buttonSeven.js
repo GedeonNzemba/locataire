@@ -5,7 +5,7 @@ const ButtonSeven = (props) => {
 
   return ( 
     <div className="button">
-      <a href="www.google.com" className="btnB btnB--transparent">{props.name}</a>
+      <a href="www.google.com" className="btnB btnB--transparent" id="header-risk-btn-right">{props.name}</a>
     </div>
   )
 }

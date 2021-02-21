@@ -1,7 +1,11 @@
 import React from "react"
 import "../styles/Locataire.css"
+import { Container, Row, Col } from "react-bootstrap"
+import  Navbar  from "react-bootstrap/Navbar"
 
-import ButtonSix from "./buttonSix"
+
+
+import ButtonSix from "./buttonSix" 
 import ButtonSeven from "./buttonSeven"
 import RealEstate from "../pages/RealEstate"
 
@@ -9,6 +13,71 @@ import RealEstate from "../pages/RealEstate"
 export default function RealtyRiskManagementLayout() {
   return (
     <React.Fragment>
+        {/* strap */}
+        <div className="locataire__risk-management" id="locataire__risk-management">
+            <header  className="risk-management__header">
+                <nav className="risk-management__navbar">
+                    <div className="risk-management_logoWrap">
+                        <img src={require("../images/logo.png")} alt="Locataire logo" style={{background: "white", backgroundSize: "100% 100%"}}></img>
+                    </div>
+                    <div id="risk-management__divider" />
+                    <ul>
+                        <li>home</li>
+                        <li>real estate</li>
+                        <li>livestock</li>
+                        <li>risk management</li>
+                        <li>career</li>
+                    </ul>
+                </nav>
+
+
+                <div className="wraper-header_content-risk">
+                    <div className="risk-management__leftWrap">
+                        <div className="risk-management__header-content">
+                            <div className="rs-subtitle" >
+                                <h3>audit & management</h3>
+                                <hr id="risk-management__Textline"/>
+                            </div>
+                            <h1>
+                                Enhance The Degree <br />
+                                Of Confidence
+                            </h1>
+                            <div className="risk-management__HeaderButton">
+                                <ButtonSix name="Learn more" />
+                                <div id="rs-line" />
+                                <ButtonSeven name="Contact Us"/>
+
+                            </div>
+                        </div>
+                        <div className="risk-management__header-rs_img">
+                            <div className="risk-management__header-rs_image" />
+                        </div>
+                    </div>
+                    <div className="header_content-inner-rightTop">
+                        <section id="risk-management__RightTopcontainer">
+                            <div className="risk-management__header-brief" id="risk-management__header-brief">
+                                <h2>
+                                    Locataire Risk Management 
+                                </h2>
+                                <p>
+                                    We provides tailored solutions to help private companies <br />
+                                    improve business strategies and practices.
+                                </p>
+                            </div>
+                        </section>
+                        <div className="risk-management__rightContent">
+                            <div className="risk-management__right_image" />
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+
+        </div>
+        {/* 1280px and less ENDS*/}
+
+
         <div className="locataire__risk-management">
             <header className="risk-management__header">
                 <nav className="risk-management__navbar">
@@ -236,7 +305,7 @@ export default function RealtyRiskManagementLayout() {
                 </section>
             </div>
 
-            <RealEstate />
+            {/* <RealEstate /> */}
         </div>
     </React.Fragment>
   )
